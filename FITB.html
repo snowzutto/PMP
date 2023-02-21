@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multiple Choice</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			header {
+				background-color: #0072C6;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+			h1 {
+				margin-top: 0;
+			}
+			.container {
+				margin: auto;
+				max-width: 800px;
+				padding: 20px;
+			}
+			#quiz, #result {
+				background-color: #F5F5F5;
+				border: 1px solid #E0E0E0;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				padding: 20px;
+			}
+			#result {
+				display: none;
+			}
+			.explanation {
+				margin-bottom: 20px;
+			}
+			.explanation h2 {
+				margin-bottom: 10px;
+			}
+			.explanation p {
+				margin-bottom: 10px;
+			}
+			.explanation ul {
+				margin-bottom: 10px;
+			}
+			button {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Fill-In-The-Blanks PMP Practice Exam Questions</h1>
+			<p>**QUESTIONS ARE RANDOMIZED UPON EACH PAGE REFRESH**</p>	
+			<p>User must press the "enter key" to answer each question</p>
+		</header>
+		<div class="container">
+			<div id="result">
+				<h2>Quiz Results</h2>
+				<div id="score"></div>
+				<div id="explanation"></div>
+				<button id="restart">Restart Quiz</button>
+			</div>
+		<div>
+			
+		</div>
+</div>
+<script src="pmp_quiz.js"></script>
+</body>
+
+</html>
+<html>
+<head>
+	<title>PMP Practice Questions</title>
+</head>
+<body>
+	<h1>PMP Practice Questions</h1>
+
+    <div id="questions-container"></div>
+    <script>
+const questions = [
+
+  { question: "The process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan is called __________ planning.", answer: "integrated", explanation: "Integrated planning is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan." },
+  { question: "__________ is the process of identifying, assessing, and managing risks to the project's objectives.", answer: "Risk management", explanation: "Risk management is the process of identifying, assessing, and managing risks to the project's objectives." },
+  { question: "The __________ is a document that describes how quality will be managed and ensured throughout the project.", answer: "quality management plan", explanation: "The quality management plan is a document that describes how quality will be managed and ensured throughout the project." },
+  { question: "The process of obtaining seller responses, selecting a seller, and awarding a contract is called __________.", answer: "procurement", explanation: "Procurement is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "The __________ is the document that defines how the project will be executed, monitored, and controlled.", answer: "project management plan", explanation: "The project management plan is the document that defines how the project will be executed, monitored, and controlled." },
+ { question: "A __________ is a document that describes how the project team will acquire goods and services from outside the performing organization.", answer: "procurement management plan", explanation: "A procurement management plan is a document that describes how the project team will acquire goods and services from outside the performing organization." },
+  { question: "__________ is the process of establishing the policies, procedures, and documentation for planning, developing, managing, executing, and controlling the project schedule.", answer: "schedule management", explanation: "Schedule management is the process of establishing the policies, procedures, and documentation for planning, developing, managing, executing, and controlling the project schedule." },
+  { question: "The __________ is the document that describes how the project scope will be defined, developed, monitored, controlled, and verified.", answer: "scope management plan", explanation: "The scope management plan is the document that describes how the project scope will be defined, developed, monitored, controlled, and verified." },
+  { question: "__________ is the process of developing a detailed project schedule based on the project's work breakdown structure.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The __________ is a document that describes how the project will be executed, monitored, and controlled.", answer: "project management plan", explanation: "The project management plan is the document that describes how the project will be executed, monitored, and controlled." },
+  { question: "The __________ is a document that defines how the project team will manage and control project costs.", answer: "cost management plan", explanation: "The cost management plan is a document that defines how the project team will manage and control project costs." },
+  { question: "__________ is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships.", answer: "project human resource management", explanation: "Project human resource management is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships." },
+  { question: "A __________ is a document that describes how the project team will manage project communications.", answer: "communications management plan", explanation: "A communications management plan is a document that describes how the project team will manage project communications." },
+  { question: "The process of developing a detailed project budget based on the project's work breakdown structure is called __________.", answer: "cost estimating", explanation: "Cost estimating is the process of developing a detailed project budget based on the project's work breakdown structure." },
+  { question: "__________ is the process of identifying and documenting project roles, responsibilities, and reporting relationships.", answer: "organizational planning", explanation: "Organizational planning is the process of identifying and documenting project roles, responsibilities, and reporting relationships." },
+ { question: "The __________ is the person or group responsible for accepting the project's deliverables.", answer: "project sponsor", explanation: "The project sponsor is the person or group responsible for accepting the project's deliverables." },
+  { question: "__________ is the process of developing the project team to enhance project performance.", answer: "team development", explanation: "Team development is the process of developing the project team to enhance project performance." },
+  { question: "The __________ is the document that describes how project changes will be identified, evaluated, and managed.", answer: "change management plan", explanation: "The change management plan is the document that describes how project changes will be identified, evaluated, and managed." },
+  { question: "__________ is the process of developing a detailed project schedule based on the project's work breakdown structure.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The __________ is the document that describes how the project will be closed out.", answer: "project closure plan", explanation: "The project closure plan is the document that describes how the project will be closed out." },
+  { question: "The __________ is the document that defines how the project's quality will be managed and ensured.", answer: "quality management plan", explanation: "The quality management plan is the document that defines how the project's quality will be managed and ensured." },
+  { question: "The process of measuring project performance and taking corrective actions to meet project objectives is called __________.", answer: "project control", explanation: "Project control is the process of measuring project performance and taking corrective actions to meet project objectives." },
+  { question: "The __________ is a document that describes how project scope will be managed, controlled, and verified.", answer: "scope management plan", explanation: "The scope management plan is a document that describes how project scope will be managed, controlled, and verified." },
+  { question: "The __________ is a document that describes how the project team will manage and control project risks.", answer: "risk management plan", explanation: "The risk management plan is a document that describes how the project team will manage and control project risks." },
+  { question: "__________ is the process of determining the project's quality standards and documenting how they will be met.", answer: "quality planning", explanation: "Quality planning is the process of determining the project's quality standards and documenting how they will be met." },
+  { question: "The __________ is the process of identifying, analyzing, and planning for risks to the project's objectives.", answer: "risk management", explanation: "Risk management is the process of identifying, analyzing, and planning for risks to the project's objectives." },
+  { question: "__________ is the process of developing a detailed project schedule based on the project's work breakdown structure.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The __________ is the document that describes how the project team will manage and control project costs.", answer: "cost management plan", explanation: "The cost management plan is the document that describes how the project team will manage and control project costs." },
+  { question: "The process of obtaining seller responses, selecting a seller, and awarding a contract is called __________.", answer: "procurement", explanation: "Procurement is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "__________ is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan.", answer: "integrated planning", explanation: "Integrated planning is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan." },
+  { question: "The __________ is the document that defines how the project team will acquire goods and services from outside the performing organization.", answer: "procurement management plan", explanation: "The procurement management plan is the document that defines how the project team will acquire goods and services from outside the performing organization." },
+  { question: "__________ is the process of establishing the policies, procedures, and documentation for planning, developing, managing, executing, and controlling the project schedule.", answer: "schedule management", explanation: "Schedule management is the process of establishing the policies, procedures, and documentation for planning, developing, managing, executing, and controlling the project schedule." },
+  { question: "The process of determining which risks may affect the project and documenting their characteristics is called __________ identification.", answer: "risk", explanation: "Risk identification is the process of determining which risks may affect the project and documenting their characteristics." },
+  { question: "The __________ is a document that describes how the project will be executed, monitored, and controlled.", answer: "project management plan", explanation: "The project management plan is a document that describes how the project will be executed, monitored, and controlled." },
+  { question: "The __________ is the process of developing a detailed project budget based on the project's work breakdown structure.", answer: "cost estimating", explanation: "Cost estimating is the process of developing a detailed project budget based on the project's work breakdown structure." },
+  { question: "The process of tracking, reviewing, and reporting the status of project risks is called __________ monitoring and control.", answer: "risk", explanation: "Risk monitoring and control is the process of tracking, reviewing, and reporting the status of project risks." },
+  { question: "The __________ is a document that describes how project scope will be managed, controlled, and verified.", answer: "scope management plan", explanation: "The scope management plan is a document that describes how project scope will be managed, controlled, and verified." },
+  { question: "__________ is the process of identifying and documenting project roles, responsibilities, and reporting relationships.", answer: "organizational planning", explanation: "Organizational planning is the process of identifying and documenting project roles, responsibilities, and reporting relationships." },
+  { question: "The __________ is the process of finalizing all activities across all project management process groups to formally complete the project or phase.", answer: "close project or phase", explanation: "The close project or phase is the process of finalizing all activities across all project management process groups to formally complete the project or phase." },
+  { question: "__________ is the process of identifying, analyzing, and responding to project risks.", answer: "risk management", explanation: "Risk management is the process of identifying, analyzing, and responding to project risks." },
+  { question: "The __________ is the process of finalizing all activities across all project management process groups to formally complete the project or phase.", answer: "close project or phase", explanation: "The close project or phase is the process of finalizing all activities across all project management process groups to formally complete the project or phase." },
+  { question: "The process of identifying stakeholders and analyzing and documenting their requirements and expectations is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of identifying stakeholders and analyzing and documenting their requirements and expectations." },
+  { question: "The process of developing a detailed description of the project and its deliverables is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of developing a detailed description of the project and its deliverables." },
+  { question: "The __________ is a document that describes how project risks will be identified, analyzed, and managed.", answer: "risk management plan", explanation: "The risk management plan is a document that describes how project risks will be identified, analyzed, and managed." },
+  { question: "__________ is the process of developing a detailed project schedule based on the project's work breakdown structure.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The process of developing a detailed project budget based on the project's work breakdown structure is called __________.", answer: "cost estimating", explanation: "Cost estimating is the process of developing a detailed project budget based on the project's work breakdown structure." },
+  { question: "The __________ is the document that describes how the project team will manage and control project communications.", answer: "communications management plan", explanation: "The communications management plan is the document that describes how the project team will manage and control project communications." },
+  { question: "__________ is the process of tracking, reviewing, and regulating the progress and performance of the project.", answer: "project control", explanation: "Project control is the process of tracking, reviewing, and regulating the progress and performance of the project." },
+  { question: "The process of developing a project team to enhance project performance is called __________.", answer: "team development", explanation: "Team development is the process of developing a project team to enhance project performance." },
+  { question: "The process of establishing and maintaining a framework for the project's governing processes is called __________.", answer: "project governance", explanation: "Project governance is the process of establishing and maintaining a framework for the project's governing processes." },
+  { question: "The __________ is the person or group responsible for accepting the project's deliverables.", answer: "project sponsor", explanation: "The project sponsor is the person or group responsible for accepting the project's deliverables." },
+  { question: "__________ is the process of identifying, evaluating, and responding to risks that may affect the project.", answer: "risk management", explanation: "Risk management is the process of identifying, evaluating, and responding to risks that may affect the project." },
+  { question: "The process of finalizing all activities across all project management process groups to formally complete the project or phase is called __________.", answer: "close project or phase", explanation: "Close project or phase is the process of finalizing all activities across all project management process groups to formally complete the project or phase." },
+  { question: "The __________ is the document that describes how the project team will manage and control project quality.", answer: "quality management plan", explanation: "The quality management plan is the document that describes how the project team will manage and control project quality." },
+  { question: "__________ is the process of determining the project's quality standards and documenting how they will be met.", answer: "quality planning", explanation: "Quality planning is the process of determining the project's quality standards and documenting how they will be met." },
+  { question: "The process of developing a detailed project schedule based on the project's work breakdown structure is called __________.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The __________ is the process of identifying and documenting project roles, responsibilities, and reporting relationships.", answer: "organizational planning", explanation: "Organizational planning is the process of identifying and documenting project roles, responsibilities, and reporting relationships." },
+  { question: "The process of obtaining seller responses, selecting a seller, and awarding a contract is called __________.", answer: "procurement", explanation: "Procurement is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "__________ is the process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes.", answer: "stakeholder analysis", explanation: "Stakeholder analysis is the process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes." },
+  { question: "The __________ is the document that describes how the project team will manage and control project risks.", answer: "risk management plan", explanation: "The risk management plan is the document that describes how the project team will manage and control project risks." },
+  { question: "The process of establishing and maintaining relationships with stakeholders is called __________ management.", answer: "stakeholder engagement", explanation: "Stakeholder engagement is the process of establishing and maintaining relationships with stakeholders." },
+  { question: "__________ is the process of developing a plan to identify and manage project risk.", answer: "risk management planning", explanation: "Risk management planning is the process of developing a plan to identify and manage project risk." },
+  { question: "The __________ is the process of creating a document that describes how the project team will manage and control project communications.", answer: "communications management planning", explanation: "Communications management planning is the process of creating a document that describes how the project team will manage and control project communications." },
+  { question: "The process of identifying, analyzing, and responding to project risks is called __________ management.", answer: "risk", explanation: "Risk management is the process of identifying, analyzing, and responding to project risks." },
+  { question: "The __________ is the process of developing a detailed description of the project and its deliverables.", answer: "scope planning", explanation: "Scope planning is the process of developing a detailed description of the project and its deliverables." },
+  { question: "__________ is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan.", answer: "integrated planning", explanation: "Integrated planning is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan." },
+  { question: "The __________ is the process of tracking, reviewing, and regulating the progress and performance of the project.", answer: "project control", explanation: "Project control is the process of tracking, reviewing, and regulating the progress and performance of the project." },
+  { question: "__________ is the process of tracking, reviewing, and regulating the progress and performance of the project.", answer: "project control", explanation: "Project control is the process of tracking, reviewing, and regulating the progress and performance of the project." },
+  { question: "The __________ is the document that describes how the project team will manage and control project communications.", answer: "communications management plan", explanation: "The communications management plan is the document that describes how the project team will manage and control project communications." },
+  { question: "The process of finalizing all activities across all project management process groups to formally complete the project or phase is called __________.", answer: "close project or phase", explanation: "Close project or phase is the process of finalizing all activities across all project management process groups to formally complete the project or phase." },
+  { question: "__________ is the process of obtaining seller responses, selecting a seller, and awarding a contract.", answer: "procurement", explanation: "Procurement is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "The __________ is the document that describes how the project team will manage and control project quality.", answer: "quality management plan", explanation: "The quality management plan is the document that describes how the project team will manage and control project quality." },
+  { question: "The process of developing a detailed project schedule based on the project's work breakdown structure is called __________.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "The __________ is the process of identifying, analyzing, and responding to project risks.", answer: "risk management", explanation: "Risk management is the process of identifying, analyzing, and responding to project risks." },
+  { question: "The process of establishing and maintaining relationships with stakeholders is called __________ management.", answer: "stakeholder engagement", explanation: "Stakeholder engagement is the process of establishing and maintaining relationships with stakeholders." },
+  { question: "The process of developing a detailed description of the project and its deliverables is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of developing a detailed description of the project and its deliverables." },
+  { question: "The __________ is the process of finalizing all activities across all project management process groups to formally complete the project or phase.", answer: "close project or phase", explanation: "The close project or phase is the process of finalizing all activities across all project management process groups to formally complete the project or phase." },
+  { question: "__________ is the process of developing a plan for project procurement that specifies how procurement will be managed and how the products and services will be acquired.", answer: "plan procurement management", explanation: "Plan procurement management is the process of developing a plan for project procurement that specifies how procurement will be managed and how the products and services will be acquired." },
+  { question: "The process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes is called __________ analysis.", answer: "stakeholder", explanation: "Stakeholder analysis is the process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes." },
+  { question: "__________ is the process of developing a document that outlines how the project team will manage quality throughout the project.", answer: "quality planning", explanation: "Quality planning is the process of developing a document that outlines how the project team will manage quality throughout the project." },
+  { question: "The process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan is called __________ planning.", answer: "integrated", explanation: "Integrated planning is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan." },
+  { question: "The __________ is the process of identifying, analyzing, and managing project risks.", answer: "risk management", explanation: "Risk management is the process of identifying, analyzing, and managing project risks." },
+  { question: "The process of identifying all stakeholders and analyzing and documenting their requirements and expectations is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of identifying all stakeholders and analyzing and documenting their requirements and expectations." },
+  { question: "The __________ is the process of developing a document that describes how the project team will identify, monitor, and control project risks.", answer: "risk management plan", explanation: "The risk management plan is the process of developing a document that describes how the project team will identify, monitor, and control project risks." },
+  { question: "__________ is the process of developing a plan for acquiring team members and determining how the team will be managed.", answer: "plan human resource management", explanation: "Plan human resource management is the process of developing a plan for acquiring team members and determining how the team will be managed." },
+  { question: "The process of developing a detailed project budget based on the project's work breakdown structure is called __________.", answer: "cost estimating", explanation: "Cost estimating is the process of developing a detailed project budget based on the project's work breakdown structure." },
+  { question: "The __________ is the process of establishing and maintaining a framework for the project's governing processes.", answer: "project governance", explanation: "Project governance is the process of establishing and maintaining a framework for the project's governing processes." },
+  { question: "The process of documenting project roles, responsibilities, required skills, and reporting relationships is called __________ planning.", answer: "human resource", explanation: "Human resource planning is the process of documenting project roles, responsibilities, required skills, and reporting relationships." },
+  { question: "__________ is the process of monitoring project results to determine if they comply with relevant quality standards and identifying ways to eliminate causes of unsatisfactory results.", answer: "quality control", explanation: "Quality control is the process of monitoring project results to determine if they comply with relevant quality standards and identifying ways to eliminate causes of unsatisfactory results." },
+  { question: "The process of establishing and maintaining communications channels and relationships with stakeholders is called __________ management.", answer: "stakeholder engagement", explanation: "Stakeholder engagement is the process of establishing and maintaining communications channels and relationships with stakeholders." },
+  { question: "__________ is the process of identifying potential project risks, assessing the likelihood and impact of those risks, and developing strategies to address them.", answer: "risk management", explanation: "Risk management is the process of identifying potential project risks, assessing the likelihood and impact of those risks, and developing strategies to address them." },
+  { question: "The __________ is the process of developing a plan for how the project will be executed and controlled.", answer: "plan project management", explanation: "The plan project management is the process of developing a plan for how the project will be executed and controlled." },
+  { question: "The process of defining the work required to complete the project is called __________.", answer: "work breakdown structure", explanation: "Work breakdown structure is the process of defining the work required to complete the project." },
+  { question: "The __________ is the document that outlines how the project team will execute and control the project.", answer: "project management plan", explanation: "The project management plan is the document that outlines how the project team will execute and control the project." },
+  { question: "The process of developing a plan for how the project's scope will be defined, validated, and controlled is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of developing a plan for how the project's scope will be defined, validated, and controlled." },
+  { question: "__________ is the process of defining how the project scope will be defined, validated, and controlled.", answer: "scope planning", explanation: "Scope planning is the process of defining how the project scope will be defined, validated, and controlled." },
+  { question: "The __________ is the document that describes how the project team will manage and control project schedule.", answer: "schedule management plan", explanation: "The schedule management plan is the document that describes how the project team will manage and control project schedule." },
+  { question: "__________ is the process of developing a plan for how project communications will be managed.", answer: "plan communications management", explanation: "Plan communications management is the process of developing a plan for how project communications will be managed." },
+  { question: "The process of tracking, reviewing, and regulating the progress and performance of the project is called __________.", answer: "project control", explanation: "Project control is the process of tracking, reviewing, and regulating the progress and performance of the project." },
+  { question: "The __________ is the document that describes how the project team will manage and control project risks.", answer: "risk management plan", explanation: "The risk management plan is the document that describes how the project team will manage and control project risks." },
+  { question: "The process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes is called __________ analysis.", answer: "stakeholder", explanation: "Stakeholder analysis is the process of identifying all stakeholders, documenting their interests, and determining how their interests may affect project outcomes." },
+  { question: "The process of monitoring project work and collecting, measuring, and distributing performance information is called __________.", answer: "monitoring and controlling", explanation: "Monitoring and controlling is the process of monitoring project work and collecting, measuring, and distributing performance information." },
+  { question: "__________ is the process of developing a document that describes how project quality will be managed and controlled.", answer: "quality planning", explanation: "Quality planning is the process of developing a document that describes how project quality will be managed and controlled." },
+  { question: "The process of developing a plan for how the project's human resources will be managed is called __________ planning.", answer: "human resource", explanation: "Human resource planning is the process of developing a plan for how the project's human resources will be managed." },
+  { question: "The __________ is the process of tracking, reviewing, and regulating the progress and performance of the project.", answer: "project control", explanation: "The project control is the process of tracking, reviewing, and regulating the progress and performance of the project." },
+  { question: "The process of developing a detailed project schedule based on the project's work breakdown structure is called __________ planning.", answer: "schedule", explanation: "Schedule planning is the process of developing a detailed project schedule based on the project's work breakdown structure." },
+  { question: "__________ is the process of managing changes to the project scope, schedule, and cost baselines.", answer: "change control", explanation: "Change control is the process of managing changes to the project scope, schedule, and cost baselines." },
+  { question: "The process of developing a plan for how project risks will be identified, analyzed, and managed is called __________ planning.", answer: "plan risk management", explanation: "Plan risk management is the process of developing a plan for how project risks will be identified, analyzed, and managed." },
+  { question: "__________ is the process of developing a detailed project schedule.", answer: "schedule development", explanation: "Schedule development is the process of developing a detailed project schedule." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project quality.", answer: "quality management plan", explanation: "The quality management plan is the document that outlines how the project team will manage and control project quality." },
+  { question: "The process of establishing a documented system of procedures and controls to direct project execution is called __________ management.", answer: "project management", explanation: "Project management is the process of establishing a documented system of procedures and controls to direct project execution." },
+  { question: "The process of developing a plan for how project costs will be estimated, budgeted, managed, and controlled is called __________ planning.", answer: "plan cost management", explanation: "Plan cost management is the process of developing a plan for how project costs will be estimated, budgeted, managed, and controlled." },
+  { question: "__________ is the process of monitoring and controlling project work to meet project performance objectives.", answer: "performance reporting", explanation: "Performance reporting is the process of monitoring and controlling project work to meet project performance objectives." },
+  { question: "The process of establishing, maintaining, and executing a communication plan that provides the stakeholders with the information they need to make informed decisions is called __________ management.", answer: "communications", explanation: "Communications management is the process of establishing, maintaining, and executing a communication plan that provides the stakeholders with the information they need to make informed decisions." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project scope.", answer: "scope management plan", explanation: "The scope management plan is the document that outlines how the project team will manage and control project scope." },
+  { question: "__________ is the process of developing a document that outlines how the project team will manage project resources.", answer: "resource planning", explanation: "Resource planning is the process of developing a document that outlines how the project team will manage project resources." },
+  { question: "The process of developing a plan for how the project's scope will be defined, validated, and controlled is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of developing a plan for how the project's scope will be defined, validated, and controlled." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project resources.", answer: "resource management plan", explanation: "The resource management plan is the document that outlines how the project team will manage and control project resources." },
+  { question: "The process of obtaining seller responses, selecting a seller, and awarding a contract is called __________.", answer: "procurement", explanation: "Procurement is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "The process of identifying, assessing, and documenting project risks is called __________ identification.", answer: "risk", explanation: "Risk identification is the process of identifying, assessing, and documenting project risks." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project schedule.", answer: "schedule management plan", explanation: "The schedule management plan is the document that outlines how the project team will manage and control project schedule." },
+  { question: "The process of monitoring the status of project risks, updating risk response plans, and evaluating their effectiveness is called __________ monitoring and controlling.", answer: "risk", explanation: "Risk monitoring and controlling is the process of monitoring the status of project risks, updating risk response plans, and evaluating their effectiveness." },
+  { question: "The process of obtaining project information, measuring and analyzing performance, and distributing performance information is called __________ control.", answer: "performance", explanation: "Performance control is the process of obtaining project information, measuring and analyzing performance, and distributing performance information." },
+  { question: "The process of defining, preparing, and coordinating all plan components and consolidating them into an integrated project management plan is called __________.", answer: "plan integration", explanation: "Plan integration is the process of defining, preparing, and coordinating all plan components and consolidating them into an integrated project management plan." },
+  { question: "The process of developing a detailed description of the project's products, services, and results is called __________ planning.", answer: "product", explanation: "Product planning is the process of developing a detailed description of the project's products, services, and results." },
+  { question: "The process of developing a document that describes how project procurement will be managed and controlled is called __________ planning.", answer: "plan procurement", explanation: "Plan procurement is the process of developing a document that describes how project procurement will be managed and controlled." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project risk.", answer: "risk management plan", explanation: "The risk management plan is the document that outlines how the project team will manage and control project risk." },
+  { question: "The process of reviewing and approving changes to the project is called __________ control.", answer: "change", explanation: "Change control is the process of reviewing and approving changes to the project." },
+  { question: "The process of monitoring project risks, identifying new risks, executing risk response plans, and evaluating their effectiveness is called __________ monitoring and controlling.", answer: "risk", explanation: "Risk monitoring and controlling is the process of monitoring project risks, identifying new risks, executing risk response plans, and evaluating their effectiveness." },
+  { question: "The process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships is called __________ planning.", answer: "organizational", explanation: "Organizational planning is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships." },
+  { question: "The process of defining, organizing, and breaking down the project work into smaller, more manageable components is called __________.", answer: "work breakdown structure", explanation: "The work breakdown structure is the process of defining, organizing, and breaking down the project work into smaller, more manageable components." },
+  { question: "The process of developing a document that outlines how the project team will manage project stakeholder engagement is called __________ planning.", answer: "stakeholder", explanation: "Stakeholder planning is the process of developing a document that outlines how the project team will manage project stakeholder engagement." },
+  { question: "The process of identifying and documenting project risks, prioritizing them for further analysis or action, and developing strategies to manage them is called __________ planning.", answer: "risk", explanation: "Risk planning is the process of identifying and documenting project risks, prioritizing them for further analysis or action, and developing strategies to manage them." },
+  { question: "The process of obtaining the necessary information to determine the quality standards for the project is called __________ planning.", answer: "quality", explanation: "Quality planning is the process of obtaining the necessary information to determine the quality standards for the project." },
+  { question: "The process of defining and documenting the project's objectives, deliverables, and work required to produce them is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of defining and documenting the project's objectives, deliverables, and work required to produce them." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project communications.", answer: "communications management plan", explanation: "The communications management plan is the document that outlines how the project team will manage and control project communications." },
+  { question: "The process of establishing and maintaining the overall direction, resources, and goals of the project is called __________.", answer: "project management", explanation: "Project management is the process of establishing and maintaining the overall direction, resources, and goals of the project." },
+  { question: "The process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships is called __________ planning.", answer: "organizational", explanation: "Organizational planning is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships." },
+  { question: "The process of identifying the specific actions to be performed to produce the project's products, services, and results is called __________ planning.", answer: "activity", explanation: "Activity planning is the process of identifying the specific actions to be performed to produce the project's products, services, and results." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project procurement.", answer: "procurement management plan", explanation: "The procurement management plan is the document that outlines how the project team will manage and control project procurement." },
+  { question: "The process of determining which risks may affect the project and documenting their characteristics is called __________ identification.", answer: "risk", explanation: "Risk identification is the process of determining which risks may affect the project and documenting their characteristics." },
+  { question: "The process of establishing the policies, procedures, and documentation for planning, executing, and controlling project cost is called __________ management.", answer: "cost", explanation: "Cost management is the process of establishing the policies, procedures, and documentation for planning, executing, and controlling project cost." },
+  { question: "The process of establishing a formal relationship with stakeholders to engage them in the project and align their expectations is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of establishing a formal relationship with stakeholders to engage them in the project and align their expectations." },
+  { question: "The process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships is called __________ planning.", answer: "organizational", explanation: "Organizational planning is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships." },
+  { question: "The process of creating a detailed project schedule by sequencing project activities and estimating their duration is called __________.", answer: "schedule development", explanation: "Schedule development is the process of creating a detailed project schedule by sequencing project activities and estimating their duration." },
+  { question: "The process of developing a document that outlines how the project team will manage and control project scope is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of developing a document that outlines how the project team will manage and control project scope." },
+  { question: "The process of obtaining the necessary information to determine quality standards for the project and product is called __________ planning.", answer: "quality", explanation: "Quality planning is the process of obtaining the necessary information to determine quality standards for the project and product." },
+  { question: "The process of ensuring that the project includes all the work required and only the work required to complete the project successfully is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of ensuring that the project includes all the work required and only the work required to complete the project successfully." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project quality.", answer: "quality management plan", explanation: "The quality management plan is the document that outlines how the project team will manage and control project quality." },
+  { question: "The process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan is called __________ planning.", answer: "plan development", explanation: "Plan development is the process of defining, preparing, and coordinating all subsidiary plans and integrating them into a comprehensive project management plan." },
+  { question: "The process of developing options and actions to enhance opportunities and reduce threats to project objectives is called __________ planning.", answer: "opportunity", explanation: "Opportunity planning is the process of developing options and actions to enhance opportunities and reduce threats to project objectives." },
+  { question: "The process of identifying and documenting the project roles, responsibilities, and reporting relationships is called __________ planning.", answer: "organizational", explanation: "Organizational planning is the process of identifying and documenting the project roles, responsibilities, and reporting relationships." },
+  { question: "The process of developing a document that outlines how the project team will manage and control project schedule is called __________ planning.", answer: "schedule", explanation: "Schedule planning is the process of developing a document that outlines how the project team will manage and control project schedule." },
+  { question: "The process of comparing actual project performance against the project management plan and taking appropriate corrective and preventive action is called __________ control.", answer: "monitoring and controlling", explanation: "Monitoring and controlling is the process of comparing actual project performance against the project management plan and taking appropriate corrective and preventive action." },
+  { question: "The process of defining, documenting, and managing stakeholder expectations is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of defining, documenting, and managing stakeholder expectations." },
+  { question: "The __________ is the document that outlines how the project team will manage and control project resources.", answer: "resource management plan", explanation: "The resource management plan is the document that outlines how the project team will manage and control project resources." },
+  { question: "The process of identifying stakeholders, determining their needs and expectations, and developing strategies to effectively engage them in project decisions and activities is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of identifying stakeholders, determining their needs and expectations, and developing strategies to effectively engage them in project decisions and activities." },
+  { question: "The process of developing a document that outlines how the project team will manage and control project resources is called __________ planning.", answer: "resource", explanation: "Resource planning is the process of developing a document that outlines how the project team will manage and control project resources." },
+  { question: "The process of coordinating changes to the project to optimize project outcomes is called __________ management.", answer: "integrated change", explanation: "Integrated change management is the process of coordinating changes to the project to optimize project outcomes." },
+  { question: "The process of defining, documenting, and managing project activities and their relationships is called __________ management.", answer: "activity", explanation: "Activity management is the process of defining, documenting, and managing project activities and their relationships." },
+  { question: "The process of developing a document that outlines how the project team will acquire goods and services from outside the project team is called __________ planning.", answer: "procurement", explanation: "Procurement planning is the process of developing a document that outlines how the project team will acquire goods and services from outside the project team." },
+  { question: "The process of monitoring the status of the project to update project progress and manage changes to the schedule baseline is called __________ control.", answer: "schedule", explanation: "Schedule control is the process of monitoring the status of the project to update project progress and manage changes to the schedule baseline." },
+  { question: "The process of finalizing all activities across all project management process groups to formally close the project or phase is called __________.", answer: "project or phase closeout", explanation: "Project or phase closeout is the process of finalizing all activities across all project management process groups to formally close the project or phase." },
+  { question: "The process of developing a document that outlines how the project team will identify and manage project risks is called __________ planning.", answer: "risk", explanation: "Risk planning is the process of developing a document that outlines how the project team will identify and manage project risks." },
+  { question: "The process of managing the procurement relationship and monitoring performance of the vendor or seller is called __________ management.", answer: "procurement", explanation: "Procurement management is the process of managing the procurement relationship and monitoring performance of the vendor or seller." },
+  { question: "The process of defining, preparing, and coordinating all plan components and consolidating them into an integrated project management plan is called __________ planning.", answer: "plan development", explanation: "Plan development is the process of defining, preparing, and coordinating all plan components and consolidating them into an integrated project management plan." },
+  { question: "The process of identifying and documenting project stakeholders, their interests, and their potential impact on project success is called __________ identification.", answer: "stakeholder", explanation: "Stakeholder identification is the process of identifying and documenting project stakeholders, their interests, and their potential impact on project success." },
+  { question: "The process of establishing, maintaining, and executing a communications plan that addresses the information and communication needs of project stakeholders is called __________ management.", answer: "communications", explanation: "Communications management is the process of establishing, maintaining, and executing a communications plan that addresses the information and communication needs of project stakeholders." },
+  { question: "The process of identifying and documenting project roles, responsibilities, and reporting relationships and obtaining necessary staffing for the project is called __________ planning.", answer: "human resource", explanation: "Human resource planning is the process of identifying and documenting project roles, responsibilities, and reporting relationships and obtaining necessary staffing for the project." },
+  { question: "The process of monitoring and controlling project risks and implementing risk response plans is called __________ control.", answer: "risk", explanation: "Risk control is the process of monitoring and controlling project risks and implementing risk response plans." },
+  { question: "The process of developing a document that outlines how the project team will manage and control project communication is called __________ planning.", answer: "communications", explanation: "Communications planning is the process of developing a document that outlines how the project team will manage and control project communication." },
+  { question: "The process of reviewing all change requests, approving changes, and managing changes to the deliverables, organizational process assets, project documents, and the project management plan is called __________ control.", answer: "change", explanation: "Change control is the process of reviewing all change requests, approving changes, and managing changes to the deliverables, organizational process assets, project documents, and the project management plan." },
+  { question: "The process of defining, documenting, and managing the procurement relationships is called __________ administration.", answer: "procurement", explanation: "Procurement administration is the process of defining, documenting, and managing the procurement relationships." },
+  { question: "The process of obtaining seller responses, selecting a seller, and awarding a contract is called __________ management.", answer: "procurement", explanation: "Procurement management is the process of obtaining seller responses, selecting a seller, and awarding a contract." },
+  { question: "The process of developing an appropriate approach and plan for project execution based on the project objectives and the stakeholders' needs, concerns, and expectations is called __________ planning.", answer: "project strategy", explanation: "Project strategy planning is the process of developing an appropriate approach and plan for project execution based on the project objectives and the stakeholders' needs, concerns, and expectations." },
+  { question: "The process of obtaining the necessary information to define the project scope and to prepare the project management plan is called __________ planning.", answer: "initiation", explanation: "Initiation planning is the process of obtaining the necessary information to define the project scope and to prepare the project management plan." },
+  { question: "The process of obtaining seller responses to documented procurement requirements and soliciting proposals from prospective sellers is called __________ management.", answer: "procurement", explanation: "Procurement management is the process of obtaining seller responses to documented procurement requirements and soliciting proposals from prospective sellers." },
+  { question: "The process of monitoring project performance and taking corrective action to ensure project execution is within the approved project management plan is called __________ control.", answer: "monitoring and controlling", explanation: "Monitoring and controlling is the process of monitoring project performance and taking corrective action to ensure project execution is within the approved project management plan." },
+  { question: "The process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships is called __________ planning.", answer: "human resource", explanation: "Human resource planning is the process of identifying, documenting, and assigning project roles, responsibilities, and reporting relationships." },
+  { question: "The process of creating a detailed description of the project and product is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of creating a detailed description of the project and product." },
+  { question: "The process of identifying and documenting project risks, their characteristics, and the potential impact on project success is called __________ identification.", answer: "risk", explanation: "Risk identification is the process of identifying and documenting project risks, their characteristics, and the potential impact on project success." },
+  { question: "The process of tracking team member performance, providing feedback, resolving issues, and managing team changes to optimize project performance is called __________ management.", answer: "team", explanation: "Team management is the process of tracking team member performance, providing feedback, resolving issues, and managing team changes to optimize project performance." },
+  { question: "The process of obtaining and documenting stakeholder needs, wants, and expectations to meet project objectives is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of obtaining and documenting stakeholder needs, wants, and expectations to meet project objectives." },
+  { question: "The process of identifying and documenting project requirements, assumptions, constraints, and criteria for acceptance is called __________ planning.", answer: "scope", explanation: "Scope planning is the process of identifying and documenting project requirements, assumptions, constraints, and criteria for acceptance." },
+  { question: "The process of determining which risks may affect the project and documenting their characteristics is called __________ identification.", answer: "risk", explanation: "Risk identification is the process of determining which risks may affect the project and documenting their characteristics." },
+  { question: "The process of determining, documenting, and managing stakeholder needs and requirements to meet project objectives is called __________ management.", answer: "stakeholder", explanation: "Stakeholder management is the process of determining, documenting, and managing stakeholder needs and requirements to meet project objectives." },
+  { question: "The process of creating a detailed description of the project and product is called __________ definition.", answer: "scope", explanation: "Scope definition is the process of creating a detailed description of the project and product." },
+  { question: "The process of monitoring and controlling the procurement relationships and managing any changes or corrections is called __________ control.", answer: "procurement", explanation: "Procurement control is the process of monitoring and controlling the procurement relationships and managing any changes or corrections." },
+  { question: "The process of defining, preparing, and coordinating subsidiary plans and integrating them into the project management plan is called __________ planning.", answer: "plan development", explanation: "Plan development is the process of defining, preparing, and coordinating subsidiary plans and integrating them into the project management plan." },
+  { question: "The process of monitoring the status of the project to update project progress and manage changes to the project management plan is called __________ control.", answer: "monitoring and controlling", explanation: "Monitoring and controlling is the process of monitoring the status of the project to update project progress and manage changes to the project management plan." },
+  { question: "The process of creating a document that outlines how the project team will acquire goods and services from outside the project team is called __________ planning.", answer: "procurement", explanation: "Procurement planning is the process of creating a document that outlines how the project team will acquire goods and services from outside the project team." },
+  { question: "The process of developing a document that outlines how the project team will manage quality is called __________ planning.", answer: "quality", explanation: "Quality planning is the process of developing a document that outlines how the project team will manage quality." },
+  { question: "The process of identifying potential risks, prioritizing them based on their likelihood and impact, and developing responses to those risks is called __________ planning.", answer: "risk", explanation: "Risk planning is the process of identifying potential risks, prioritizing them based on their likelihood and impact, and developing responses to those risks." },
+  { question: "The process of obtaining bids and proposals from prospective sellers is called __________ solicitation.", answer: "procurement", explanation: "Procurement solicitation is the process of obtaining bids and proposals from prospective sellers." },
+  { question: "The process of developing a document that outlines how the project team will manage and control project costs is called __________ planning.", answer: "cost", explanation: "Cost planning is the process of developing a document that outlines how the project team will manage and control project costs." },
+  { question: "The process of identifying, documenting, and managing project risks is called __________ management.", answer: "risk", explanation: "Risk management is the process of identifying, documenting, and managing project risks." },
+  { question: "The process of creating a formal agreement between the project team and stakeholders is called __________.", answer: "contracting", explanation: "Contracting is the process of creating a formal agreement between the project team and stakeholders." }
+
+];
+
+
+      // Shuffle the questions array using the Fisher-Yates shuffle algorithm
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+      shuffleArray(questions);
+
+      // Generate the questions and input fields
+function generateQuestions() {
+  const questionsContainer = document.getElementById("questions-container");
+  for (let i = 0; i < questions.length; i++) {
+    const question = questions[i];
+    const questionDiv = document.createElement("div");
+    questionDiv.className = "question";
+    const questionNumber = document.createElement("h2");
+    questionNumber.textContent = "Question " + (i + 1);
+    const questionText = question.question.replace("__________", "<input type='text' id='answer" + (i + 1) + "' />");
+    const questionSpan = document.createElement("p");
+    questionSpan.innerHTML = questionText;
+    const feedbackDiv = document.createElement("div");
+    feedbackDiv.className = "feedback";
+    const explanationDiv = document.createElement("div");
+    explanationDiv.className = "explanation";
+    questionDiv.appendChild(questionNumber);
+    questionDiv.appendChild(questionSpan);
+    questionDiv.appendChild(feedbackDiv);
+    questionDiv.appendChild(explanationDiv);
+    questionsContainer.appendChild(questionDiv);
+  }
+}
+
+function checkAnswer(questionIndex) {
+  const answer = document.getElementById("answer" + questionIndex).value.toLowerCase();
+  const question = questions[questionIndex];
+  const feedbackDiv = document.getElementsByClassName("feedback")[questionIndex];
+  const explanationDiv = document.getElementsByClassName("explanation")[questionIndex];
+
+  // Compute the Levenshtein distance between the user's answer and the correct answer
+  const distance = LevenshteinDistance(answer, question.answer.toLowerCase());
+
+  // Determine the maximum allowable distance based on the length of the correct answer
+  const maxDistance = Math.ceil(question.answer.length / 3);
+
+  if (distance <= maxDistance || answer === question.answer.toLowerCase()) {
+    feedbackDiv.textContent = "Correct!";
+    feedbackDiv.style.color = "green";
+    explanationDiv.innerHTML = "<span class='incorrect-message'>Correct, </span>" + question.explanation;
+  } else {
+    feedbackDiv.innerHTML = "<span class='incorrect-message'>Incorrect. The correct answer is " + question.answer + ". </span><span class='explanation-message'>" + question.explanation + "</span>";
+    feedbackDiv.style.color = "red";
+    explanationDiv.textContent = "";
+  }
+}
+
+
+// Levenshtein distance algorithm
+function LevenshteinDistance(s, t) {
+  const d = [];
+  const n = s.length;
+  const m = t.length;
+
+  if (n === 0) return m;
+  if (m === 0) return n;
+
+  for (let i = 0; i <= n; i++) {
+    d[i] = [];
+    d[i][0] = i;
+  }
+
+  for (let j = 0; j <= m; j++) {
+    d[0][j] = j;
+  }
+
+  for (let j = 1; j <= m; j++) {
+    for (let i = 1; i <= n; i++) {
+      if (s[i - 1] === t[j - 1]) {
+        d[i][j] = d[i - 1][j - 1];
+      } else {
+        d[i][j] = Math.min(d[i - 1][j], d[i][j - 1], d[i - 1][j - 1]) + 1;
+      }
+    }
+  }
+
+  return d[n][m];
+}
+
+
+      // Add event listener to the questions container to check the answer when the user presses Enter
+      function addEventListeners() {
+        const questionsContainer = document.getElementById("questions-container");
+        questionsContainer.addEventListener("keyup", function(event) {
+          if (event.keyCode === 13) {
+            event.preventDefault();
+            const answerInput = event.target;
+            const questionIndex = parseInt(answerInput.id.replace("answer", "")) - 1;
+            checkAnswer(questionIndex);
+            if (questionIndex < questions.length - 1) {
+              const nextInput = document.getElementById("answer" + (questionIndex + 2));
+              nextInput.focus();
+            }
+          }
+        });
+}
+
+generateQuestions();
+addEventListeners();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>PMP Exam Practice Quiz</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			header {
+				background-color: #0072C6;
+				color: white;
+				padding: 20px;
+				text-align: center;
+			}
+			h1 {
+				margin-top: 0;
+			}
+			.container {
+				margin: auto;
+				max-width: 800px;
+				padding: 20px;
+			}
+			#quiz, #result {
+				background-color: #F5F5F5;
+				border: 1px solid #E0E0E0;
+				border-radius: 5px;
+				margin-bottom: 20px;
+				padding: 20px;
+			}
+			#result {
+				display: none;
+			}
+			.explanation {
+				margin-bottom: 20px;
+			}
+			.explanation h2 {
+				margin-bottom: 10px;
+			}
+			.explanation p {
+				margin-bottom: 10px;
+			}
+			.explanation ul {
+				margin-bottom: 10px;
+			}
+			button {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Multiple Choice PMP Practice Exam Questions</h1>
+			<p>**QUESTIONS ARE RANDOMIZED UPON EACH PAGE REFRESH**</p>	
+		</header>
+		<div class="container">
+			<div id="result">
+				<h2>Quiz Results</h2>
+				<div id="score"></div>
+				<div id="explanation"></div>
+				<button id="restart">Restart Quiz</button>
+			</div>
+		<div>
+			
+		</div>
+</div>
+<script src="pmp_quiz.js"></script>
+</body>
+
+</html>
+<html>
+<head>
+	<title>PMP Practice Questions</title>
+</head>
+<body>
+	<h1>PMP Practice Questions</h1>
+
+	<!-- Define an array of PMP questions and answers -->
+	<script>
+		var questions = [
+			{
+				question: "Which of the following is not an input to the Close Project or Phase process?",
+				choices: ["Accepted deliverables", "Project charter", "Project management plan", "Organizational process assets updates"],
+				answer: "d",
+				explanation: "Organizational process assets updates are not an input to the Close Project or Phase process. The inputs are project charter, project management plan, accepted deliverables, and work performance information."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Define Activities process?",
+				choices: ["Decomposition", "Rolling wave planning", "Expert judgment", "Resource optimization"],
+				answer: "d",
+				explanation: "Resource optimization is not a tool or technique used in the Define Activities process. The tools and techniques are decomposition, rolling wave planning, templates, expert judgment, and meetings."
+			},
+			{
+				question: "Which of the following is a technique used in the Control Costs process?",
+				choices: ["PERT analysis", "Bottom-up estimating", "Vendor bid analysis", "Three-point estimating"],
+				answer: "d",
+				explanation: "Three-point estimating is a technique used in the Control Costs process. It involves using optimistic, pessimistic, and most likely estimates to calculate a range of possible costs for an activity."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Quality process?",
+				choices: ["Design of experiments", "Statistical sampling", "Quality control charts", "Benchmarking"],
+				answer: "d",
+				explanation: "Benchmarking is not a tool or technique used in the Control Quality process. Benchmarking is a technique used in the Plan Quality process to identify best practices and standards to be used in the project."
+			},
+			{
+				question: "Which of the following is a characteristic of the Plan Procurement Management process?",
+				choices: ["It identifies potential sellers and their capabilities", "It determines the types of contracts to be used", "It determines how project costs will be reimbursed", "It documents the procurement decisions and actions"],
+				answer: "b",
+				explanation: "The Plan Procurement Management process determines the types of contracts to be used for procurement activities. It also identifies potential sellers and their capabilities, determines the procurement approach, and documents the procurement decisions and actions."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Estimate Activity Resources process?",
+				choices: ["Expert judgment", "Bottom-up estimating", "Make-or-buy analysis", "Project management software"],
+				answer: "c",
+				explanation: "Make-or-buy analysis is not a tool or technique used in the Estimate Activity Resources process. The tools and techniques are expert judgment, alternative analysis, bottom-up estimating, and project management software."
+			},
+			{
+				question: "Which of the following is a tool or technique used in the Develop Schedule process?",
+				choices: ["Expert judgment", "Critical path method", "Resource optimization", "Three-point estimating"],
+				answer: "b",
+				explanation: "The Critical Path Method (CPM) is a tool used in the Develop Schedule process. It is used to calculate the critical path of the project, which is the longest path of activities that determines the earliest possible end date of the project."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Estimate Costs process?",
+				choices: ["Analogous estimating", "Bottom-up estimating", "Parametric estimating", "Performance reporting"],
+				answer: "d",
+				explanation: "Performance reporting is not a tool or technique used in the Estimate Costs process. The tools and techniques are analogous estimating, parametric estimating, bottom-up estimating, and three-point estimating."
+			},
+			{
+				question: "Which of the following is not a characteristic of a project?",
+				choices: ["Has a defined beginning and end", "Involves creating a unique product or service", "Is a routine operation", "Is undertaken to achieve a specific objective"],
+				answer: "c",
+				explanation: "A project is not a routine operation, but a temporary and unique endeavor undertaken to achieve a specific objective. It has a defined beginning and end, and involves creating a unique product or service."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Quality Management process?",
+				choices: ["Quality metrics", "Quality checklists", "Quality control measurements", "Quality reports"],
+				answer: "c",
+				explanation: "Quality control measurements are not an output of the Plan Quality Management process. The outputs are quality management plan, process improvement plan, quality metrics, quality checklists, and quality reports."
+			},
+			{
+				question: "Which of the following is a characteristic of the Control Stakeholder Engagement process?",
+				choices: ["It is concerned with managing stakeholder expectations", "It is concerned with managing stakeholder communication", "It is concerned with managing stakeholder change requests", "It is concerned with managing stakeholder risks"],
+				answer: "a",
+				explanation: "The Control Stakeholder Engagement process is concerned with managing stakeholder expectations. It also involves monitoring and controlling stakeholder engagement, and communicating and reporting project performance to stakeholders."
+			},
+			{
+				question: "Which of the following is a tool or technique used in the Identify Stakeholders process?",
+				choices: ["Expert judgment", "Focus groups", "Alternative analysis", "Change control system"],
+				answer: "b",
+				explanation: "Focus groups are a tool or technique used in the Identify Stakeholders process. They are used to gather information about stakeholder needs, wants, and expectations, and to identify stakeholders who may not have been previously identified."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Risk Management process?",
+				choices: ["Risk register", "Expert judgment", "Data gathering", "Risk probability and impact assessment"],
+				answer: "a",
+				explanation: "The risk register is not a tool or technique used in the Plan Risk Management process. It is an output of the process. The tools and techniques are expert judgment, data gathering, and meetings."
+			},
+			{
+				question: "Which of the following is a tool or technique used in the Identify Risks process?",
+				choices: ["Expert judgment", "Risk probability and impact assessment", "Risk breakdown structure", "Risk register"],
+				answer: "a",
+				explanation: "Expert judgment is a tool or technique used in the Identify Risks process. It is used to draw on the knowledge and experience of individuals or groups to identify potential risks and evaluate their likelihood and impact."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Qualitative Risk Analysis process?",
+				choices: ["Risk data quality assessment",
+
+
+				"Risk probability and impact assessment", "Risk categorization", "Data gathering"],
+				answer: "b",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Perform Qualitative Risk Analysis process. It is used in the Perform Quantitative Risk Analysis process to numerically analyze the effect of identified risks on project objectives."
+			},
+			{
+				question: "Which of the following is a tool or technique used in the Plan Risk Responses process?",
+				choices: ["Risk probability and impact assessment", "Reserve analysis", "Risk breakdown structure", "Risk register"],
+				answer: "b",
+				explanation: "Reserve analysis is a tool or technique used in the Plan Risk Responses process. It is used to determine the amount of contingency reserves needed to cover the risks identified in the risk register."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Risks process?",
+				choices: ["Risk reassessment", "Variance and trend analysis", "Technical performance measurement", "Risk probability and impact assessment"],
+				answer: "d",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Control Risks process. It is used in the Identify Risks and Perform Qualitative Risk Analysis processes to evaluate the likelihood and impact of identified risks."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Schedule Management process?",
+				choices: ["Schedule model", "Schedule baseline", "Schedule data", "Schedule network diagram"],
+				answer: "d",
+				explanation: "The schedule network diagram is not an output of the Plan Schedule Management process. It is an output of the Develop Schedule process. The outputs of the Plan Schedule Management process are schedule management plan, schedule model, schedule baseline, and schedule data."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Define Scope process?",
+				choices: ["Product analysis", "Project management software", "Expert judgment", "Document analysis"],
+				answer: "b",
+				explanation: "Project management software is not a tool or technique used in the Define Scope process. The tools and techniques are expert judgment, product analysis, document analysis, and facilitated workshops."
+			},
+			{
+				question: "Which of the following is not a characteristic of a well-written requirement?",
+				choices: ["It is complete", "It is clear and concise", "It is feasible", "It is consistent"],
+				answer: "c",
+				explanation: "A well-written requirement is complete, clear and concise, and consistent. It is also unambiguous, testable, and traceable. Feasibility is not a characteristic of a requirement, but rather a characteristic of the project's ability to achieve the requirement."
+			},
+			{
+				question: "Which of the following is not an output of the Collect Requirements process?",
+				choices: ["Requirements documentation", "Requirements traceability matrix", "Requirements management plan", "Requirements validation"],
+				answer: "d",
+				explanation: "Requirements validation is not an output of the Collect Requirements process. The outputs are requirements documentation, requirements traceability matrix, requirements management plan, and stakeholder requirements."
+			},
+			{
+				question: "Which of the following is a characteristic of the Verify Scope process?",
+				choices: ["It is concerned with documenting the acceptance of deliverables", "It is concerned with controlling changes to project scope", "It is concerned with ensuring that all project requirements are met", "It is concerned with defining the project scope				statement"],
+				answer: "a",
+				explanation: "The Verify Scope process is concerned with documenting the acceptance of deliverables. It involves reviewing deliverables to ensure they meet the requirements and obtain formal acceptance of the completed deliverables."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Scope process?",
+				choices: ["Variance analysis", "Change control system", "Performance reporting", "Project management software"],
+				answer: "c",
+				explanation: "Performance reporting is not a tool or technique used in the Control Scope process. The tools and techniques are variance analysis, change control system, and project management software."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Validate Scope process?",
+				choices: ["Inspection", "Expert judgment", "Product analysis", "Performance reporting"],
+				answer: "d",
+				explanation: "Performance reporting is not a tool or technique used in the Validate Scope process. The tools and techniques are inspection, expert judgment, product analysis, and group decision-making techniques."
+			},
+			{
+				question: "Which of the following is a characteristic of the Control Communications process?",
+				choices: ["It is concerned with managing project stakeholders", "It is concerned with monitoring and controlling project communications", "It is concerned with managing project documentation", "It is concerned with managing project resources"],
+				answer: "b",
+				explanation: "The Control Communications process is concerned with monitoring and controlling project communications. It involves ensuring that communications are meeting their intended purposes, and managing stakeholder expectations for communication."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Communications Management process?",
+				choices: ["Communication models", "Stakeholder analysis", "Project management software", "Brainstorming"],
+				answer: "d",
+				explanation: "Brainstorming is not a tool or technique used in the Plan Communications Management process. The tools and techniques are communication requirements analysis, communication technology, communication constraints, communication models, and stakeholder analysis."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Identify Project Stakeholders process?",
+				choices: ["Expert judgment", "Stakeholder analysis", "Document analysis", "Team-building activities"],
+				answer: "d",
+				explanation: "Team-building activities are not a tool or technique used in the Identify Project Stakeholders process. The tools and techniques are expert judgment, data gathering, stakeholder analysis, and documentation reviews."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Human Resource Management process?",
+				choices: ["Organizational theory", "Expert judgment", "Role and responsibility assignment matrix", "Meeting management techniques"],
+				answer: "d",
+				explanation: "Meeting management techniques are not a tool or technique used in the Plan Human Resource Management process. The tools and techniques are organizational theory, expert judgment, templates, and organizational charts."
+			},
+			{
+				question: "Which of the following is a characteristic of the Acquire Resources process?",
+				choices: ["It is concerned with identifying project staffing requirements", "It is concerned with developing the human resource plan", "It is concerned with acquiring project team members", "It is concerned with managing project team assignments"],
+				answer: "c",
+				explanation: "The Acquire Resources process is concerned with acquiring project team members. It involves obtaining the necessary human, physical, and material resources to complete the project deliverables."
+		
+			},
+			{
+				question: "Which of the following is not an output of the Plan Procurement Management process?",
+				choices: ["Procurement documents", "Source selection criteria", "Seller proposals", "Project documents updates"],
+				answer: "c",
+				explanation: "Seller proposals are not an output of the Plan Procurement Management process. The outputs are procurement management plan, procurement statement of work, procurement documents, source selection criteria, make-or-buy decisions, and contracts."
+			},
+			{
+				question: "Which of the following is a tool or technique used in the Conduct Procurements process?",
+				choices: ["Make-or-buy analysis", "Inspection and audit", "Bidder conferences", "Contract negotiation"],
+				answer: "d",
+				explanation: "Contract negotiation is a tool or technique used in the Conduct Procurements process. It involves negotiating with potential sellers to obtain the best value for the project."
+			},
+			{
+				question: "Which of the following is not an output of the Control Procurements process?",
+				choices: ["Change requests", "Contract updates", "Procurement performance reports", "Work performance information"],
+				answer: "d",
+				explanation: "Work performance information is not an output of the Control Procurements process. It is an input to the process. The outputs are procurement documentation updates, change requests, procurement performance reports, and contract updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+				choices: ["Expert judgment", "Risk probability and impact assessment", "Risk breakdown structure", "Risk register"],
+				answer: "b",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Identify Risks process. It is used in the Perform Qualitative Risk Analysis and Perform Quantitative Risk Analysis processes to evaluate the likelihood and impact of identified risks."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Risk Responses process?",
+				choices: ["Risk reassessment", "Variance analysis", "Risk breakdown structure", "Contingency planning"],
+				answer: "b",
+				explanation: "Variance analysis is not a tool or technique used in the Plan Risk Responses process. It is used in the Control Costs process to determine the cause of and degree of variation from the project baseline."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Qualitative Risk Analysis process?",
+				choices: ["Risk data quality assessment", "Risk probability and impact assessment", "Risk categorization", "Data gathering"],
+				answer: "b",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Perform Qualitative Risk Analysis process. It is used in the Perform Quantitative Risk Analysis process to numerically analyze the effect of identified risks on project objectives."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Risks process?",
+				choices: ["Risk reassessment", "Variance and trend analysis", "Technical performance measurement", "Risk probability and impact assessment"],
+				answer: "d",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Control Risks process. It is used in the Identify Risks and Perform Qualitative Risk Analysis processes to evaluate the likelihood and impact of identified risks."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Estimate Activity 	Durations process?",
+				choices: ["Analogous estimating", "Expert judgment", "Cost of quality", "Three-point estimating"],
+				answer: "c",
+				explanation: "Cost of quality is not a tool or technique used in the Estimate Activity Durations process. The tools and techniques are analogous estimating, expert judgment, parametric estimating, three-point estimating, and reserve analysis."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Develop Schedule process?",
+				choices: ["Schedule network analysis", "Resource leveling", "Crashing", "Risk probability and impact assessment"],
+				answer: "d",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Develop Schedule process. The tools and techniques are schedule network analysis, critical path method, resource leveling, what-if scenario analysis, and leads and lags."
+			},
+			{
+				question: "Which of the following is not an output of the Control Schedule process?",
+				choices: ["Schedule baseline", "Performance reports", "Schedule data", "Schedule network diagram"],
+				answer: "d",
+				explanation: "The schedule network diagram is not an output of the Control Schedule process. It is an output of the Develop Schedule process. The outputs of the Control Schedule process are work performance information, schedule forecasts, change requests, project management plan updates, project document updates, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Develop Budget process?",
+				choices: ["Expert judgment", "Cost aggregation", "Project management software", "Resource leveling"],
+				answer: "d",
+				explanation: "Resource leveling is not a tool or technique used in the Develop Budget process. The tools and techniques are expert judgment, analogous estimating, parametric estimating, bottom-up estimating, and cost aggregation."
+			},
+			{
+				question: "Which of the following is not an output of the Control Costs process?",
+				choices: ["Cost forecasts", "Work performance information", "Cost management plan updates", "Scope changes"],
+				answer: "d",
+				explanation: "Scope changes are not an output of the Control Costs process. They are an input to the process. The outputs are work performance measurements, cost forecasts, change requests, project management plan updates, project document updates, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Quality Management process?",
+				choices: ["Statistical sampling", "Flowcharting", "Root cause analysis", "Resource leveling"],
+				answer: "d",
+				explanation: "Resource leveling is not a tool or technique used in the Plan Quality Management process. The tools and techniques are expert judgment, benchmarking, flowcharting, design of experiments, statistical sampling, and cost-benefit analysis."
+			},
+			{
+				question: "Which of the following is a characteristic of a well-written quality objective?",
+				choices: ["It is measurable", "It is general", "It is unclear", "It is subjective"],
+				answer: "a",
+				explanation: "A well-written quality objective is measurable, specific, and aligned with project and organizational objectives. It is not general, unclear, or subjective."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Quality Assurance process?",
+				choices: ["Benchmarking", "Flowcharting", "Statistical sampling", "Resource leveling"],
+				answer: "d",
+				explanation: "Resource leveling is not a tool or technique used in the Perform Quality Assurance process. The tools and techniques are quality planning tools and techniques, quality improvement methods, and quality control tools and techniques."
+			},
+			{
+				question: "Which of the following is not an output of the Control Quality process?",
+				choices: ["Quality reports", "Quality control measurements", "Quality metrics", "Quality management plan updates"],
+				answer: "c",
+				explanation: "Quality metrics are not an output of the Control Quality process. The outputs are quality control measurements, validated changes, validated deliverables, work performance information, quality reports, and quality management plan updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Risk Management process?",
+				choices: ["Expert judgment", "Risk probability and impact assessment", "Risk breakdown structure", "Data gathering"],
+				answer: "b",
+				explanation: "Risk probability and impact assessment is not a tool or technique used in the Plan Risk Management process. The tools and techniques are expert judgment, analytical techniques, interrelated components, and documentation reviews."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Risk Management process?",
+				choices: ["Risk register", "Risk breakdown structure", "Risk management plan", "Risk probability and impact assessment"],
+				answer: "d",
+				explanation: "Risk probability and impact assessment is not an output of the Plan Risk Management process. It is a tool or technique used in the Identify Risks process to evaluate the likelihood and impact of identified risks."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Quantitative Risk Analysis process?",
+				choices: ["Cost of quality", "Sensitivity analysis", "Monte Carlo analysis", "Expert judgment"],
+				answer: "a",
+				explanation: "Cost of quality is not a tool or technique used in the Perform Quantitative Risk Analysis process. The tools and techniques are data gathering and representation techniques, quantitative risk analysis and modeling techniques, and expert judgment."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Risk Responses process?",
+				choices: ["Contingency planning", "Risk reassessment", "Risk mitigation", "Cost of quality"],
+				answer: "d",
+				explanation: "Cost of quality is not a tool or technique used in the Plan Risk Responses process. The tools and techniques are strategies for negative risks or threats, strategies for positive risks or opportunities, contingency planning, expert judgment, and risk reassessment."
+			},
+			{
+				question: "Which of the following is not an output of the Monitor and Control Project Work process?",
+				choices: ["Work performance information", "Change requests", "Cost forecasts", "Project management plan updates"],
+				answer: "c",
+				explanation: "Cost forecasts are not an output of the Monitor and Control Project Work process. The outputs are work performance information, change requests, project management plan updates, project document updates, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Integrated Change Control process?",
+				choices: ["Expert judgment", "Change control meetings", "Configuration management", "Root cause analysis"],
+				answer: "d",
+				explanation: "Root cause analysis is not a tool or technique used in the Integrated Change Control process. The tools and techniques are expert judgment, change control tools, configuration management, and performance measurement."
+			},
+			{
+ 				question: "Which of the following is not an output of the Close Project or Phase process?",
+				choices: ["Final product, service, or result transition", "Lessons learned", "Organizational process assets updates", "Work performance information"],
+				answer: "d",
+				explanation: "Work performance information is not an output of the Close Project or Phase process. The outputs are final product, service, or result transition, closed contracts, project or phase closure documents, organizational process assets updates, and lessons learned."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Close Project or Phase process?",
+				choices: ["Expert judgment", "Procurement audits", "Performance measurement", "Configuration management"],
+				answer: "d",
+				explanation: "Configuration management is not a tool or technique used in the Close Project or Phase process. The tools and techniques are expert judgment, analytical techniques, meetings, and performance measurement."
+			},
+			{
+				question: "Which of the following is not an input to the Identify Stakeholders process?",
+				choices: ["Stakeholder management plan", "Project charter", "Project management plan", "Project documents"],
+				answer: "c",
+				explanation: "The project management plan is not an input to the Identify Stakeholders process. The inputs are project charter, stakeholder management plan, project documents, enterprise environmental factors, and organizational process assets."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Stakeholder Engagement process?",
+				choices: ["Stakeholder analysis", "Expert judgment", "Stakeholder register", "Data gathering"],
+				answer: "c",
+				explanation: "The stakeholder register is not a tool or technique used in the Plan Stakeholder Engagement process. It is an output of the Identify Stakeholders process. The tools and techniques are expert judgment, data gathering and analysis, and decision making."
+			},
+			{
+				question: "Which of the following is not an output of the Monitor Stakeholder Engagement process?",
+				choices: ["Stakeholder management plan updates", "Change requests", "Organizational process assets updates", "Stakeholder engagement assessment"],
+				answer: "b",
+				explanation: "Change requests are not an output of the Monitor Stakeholder Engagement process. The outputs are work performance information, change requests, project management plan updates, project document updates, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Stakeholder Engagement process?",
+				choices: ["Issue log", "Stakeholder management plan updates", "Change control board", "Data analysis"],
+				answer: "c",
+				explanation: "The change control board is not a tool or technique used in the Control Stakeholder Engagement process. It is used in the Perform Integrated Change Control process to review and approve or reject change requests."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Collect Requirements process?",
+				choices: ["Focus groups", "Benchmarking", "Interviews", "Critical path analysis"],
+				answer: "d",
+				explanation: "Critical path analysis is not a tool or technique used in the Collect Requirements process. The tools and techniques are interviews, focus groups, facilitated workshops, group creativity techniques, group decision-making techniques, questionnaires and surveys, observations, prototypes, benchmarking, context diagrams, document analysis, and interface analysis."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Define Scope process?",
+				choices: ["Product analysis", "Expert judgment", "Scope baseline", "Quality management"],
+				answer: "d",
+				explanation: "Quality management is not a tool or technique used in the Define Scope process. The tools and techniques are expert judgment, product analysis, alternatives identification, facilitated workshops, context diagrams, document analysis, and decision making."
+			},
+			{
+				question: "Which of the following is not an output of the Create WBS process?",
+				choices: ["Scope baseline", "Work package", "Scope management plan", "WBS dictionary"],
+				answer: "c",
+				explanation: "The scope management plan is not an output of the Create WBS process. It is an input to the process. The outputs are WBS, WBS dictionary, scope baseline, and project document updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Scope process?",
+				choices: ["Variance analysis", "Expert judgment", "Data analysis", "Scope creep"],
+				answer: "d",
+				explanation: "Scope creep is not a tool or technique used in the Control Scope process. It is an uncontrolled change to the project scope. The tools and techniques are expert judgment, data analysis, decision making, and variance analysis."
+			},
+			{
+				question: "Which of the following is not an output of the Validate Scope process?",
+				choices: ["Work performance information", "Accepted deliverables", "Change requests", "Verified deliverables"],
+				answer: "a",
+				explanation: "Work performance information is not an output of the Validate Scope process. The outputs are accepted deliverables, change requests, work performance information, and project document updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Schedule process?",
+				choices: ["Critical path method", "Resource optimization techniques", "Schedule compression", "Activity attributes"],
+				answer: "d",
+				explanation: "Activity attributes are not a tool or technique used in the Control Schedule process. They are used in the Define Activities process to define the characteristics of activities. The tools and techniques are performance reviews, project management software, resource optimization techniques, modeling techniques, and schedule compression."
+			},
+			{
+				question: "Which of the following is not an output of the Monitor and Control Project Work process?",
+				choices: ["Work performance data", "Cost forecasts", "Change requests", "Project management plan updates"],
+				answer: "b",
+				explanation: "Cost forecasts are not an output of the Monitor and Control Project Work process. The outputs are work performance data, change requests, project management plan updates, project document updates, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Integrated Change Control process?",
+				choices: ["Expert judgment", "Configuration management", "Change control board", "Variance analysis"],
+				answer: "d",
+				explanation: "Variance analysis is not a tool or technique used in the Perform Integrated Change Control process. The tools and techniques are expert judgment, change control tools, configuration management, and performance measurement."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Validate Scope process?",
+				choices: ["Product analysis", "Inspection", "Quality control", "Benchmarking"],
+				answer: "d",
+				explanation: "Benchmarking is not a tool or technique used in the Validate Scope process. The tools and techniques are inspection, group decision-making techniques, product analysis, and testing."
+			},
+			{
+				question: "Which of the following is not an output of the Monitor Communications process?",
+				choices: ["Organizational process assets updates", "Work performance reports", "Change requests", "Project communications updates"],
+				answer: "c",
+				explanation: "Change requests are not an output of the Monitor Communications process. The outputs are work performance reports, project communications, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Quality Management process?",
+				choices: ["Cost-benefit analysis", "Quality metrics", "Benchmarking", "Checklists"],
+				answer: "a",
+				explanation: "Cost-benefit analysis is not a tool or technique used in the Plan Quality Management process. The tools and techniques are cost of quality, benchmarking, flowcharting, cause-and-effect diagrams, checklists, statistical sampling, and design of experiments."
+			},
+			{
+				question: "Which of the following is not an output of the Perform Quality Assurance process?",
+				choices: ["Work performance information", "Quality control measurements", "Change requests", "Process improvements"],
+				answer: "c",
+				explanation: "Change requests are not an output of the Perform Quality Assurance process. The outputs are quality improvements, process improvements, quality control measurements, and validated changes."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Quality process?",
+				choices: ["Statistical sampling", "Inspection", "Design of experiments", "Quality metrics"],
+				answer: "d",
+				explanation: "Quality metrics are not a tool or technique used in the Control Quality process. They are used in the Plan Quality Management process to define and measure quality. The tools and techniques are inspection, control charts, histograms, Pareto charts, statistical sampling, and flowcharting."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Resource Management process?",
+				choices: ["Resource calendars", "Resource requirements", "Team charter", "Process improvement plan"],
+				answer: "d",
+				explanation: "Process improvement plan is not an output of the Plan Resource Management process. The outputs are resource management plan, resource requirements, staffing management plan, team charter, and resource calendar."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Estimate Activity Durations process?",
+				choices: ["Three-point estimates", "Expert judgment", "Reserve analysis", "Parametric estimating"],
+				answer: "c",
+				explanation: "Reserve analysis is not a tool or technique used in the Estimate Activity Durations process. It is used in the Develop Schedule process to determine the amount of contingency and management reserves needed. The tools and techniques are expert judgment, analogous estimating, parametric estimating, three-point estimates, and group decision-making techniques."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Schedule Management process?",
+				choices: ["Project document updates", "Schedule management plan", "Scope baseline", "Enterprise environmental factors updates"],
+				answer: "c",
+				explanation: "Scope baseline is not an output of the Plan Schedule Management process. It is an input to the process. The outputs are schedule management plan, project document updates, and enterprise environmental factors updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Define Activities process?",
+				choices: ["Milestone list", "Project management software", "Expert judgment", "Activity attributes"],
+				answer: "b",
+				explanation: "Project management software is not a tool or technique used in the Define Activities process. It is used in the Develop Schedule process to create the project schedule. The tools and techniques for the Define Activities process are decomposition, rolling wave planning, templates, expert judgment, and activity list."
+			},
+			{
+				question: "Which of the following is not an output of the Estimate Costs process?",
+				choices: ["Cost baseline", "Activity cost estimates", "Project document updates", "Resource breakdown structure"],
+				answer: "d",
+				explanation: "Resource breakdown structure is not an output of the Estimate Costs process. It is a hierarchical decomposition of project resources that is used in the Plan Resource Management process. The outputs of the Estimate Costs process are activity cost estimates, basis of estimates, project document updates, and cost management plan."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Costs process?",
+				choices: ["Earned value management", "Variance analysis", "Data analysis", "Activity attributes"],
+				answer: "d",
+				explanation: "Activity attributes are not a tool or technique used in the Control Costs process. They are used in the Define Activities process to define the characteristics of activities. The tools and techniques for the Control Costs process are earned value management, forecasting, to-complete performance index, performance reviews, and data analysis."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Risk Management process?",
+				choices: ["Risk management plan", "Risk register", "Risk response plan", "Risk report"],
+				answer: "d",
+				explanation: "Risk report is not an output of the Plan Risk Management process. It is an output of the Monitor and Control Risks process. The outputs of the Plan Risk Management process are risk management plan, risk register, and risk-related contractual agreements."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+				choices: ["Checklists", "Risk breakdown structure", "Expert judgment", "Brainstorming"],
+				answer: "b",
+				explanation: "Risk breakdown structure is not a tool or technique used in the Identify Risks process. It is a hierarchical decomposition of project risks that is used in the Plan Risk Management process. The tools and techniques for the Identify Risks process are documentation reviews, information gathering techniques, checklist analysis, assumptions analysis, diagramming techniques, SWOT analysis, expert judgment, and brainstorming."
+			},
+			{
+				question: "Which of the following is not an output of the Perform Qualitative Risk Analysis process?",
+				choices: ["Risk register updates", "Risk probability and impact assessment", "Risk urgency assessment", "Risk scorecard"],
+				answer: "d",
+				explanation: "Risk scorecard is not an output of the Perform Qualitative Risk Analysis process. It is a tool used to evaluate and prioritize risks. The outputs of the Perform Qualitative Risk Analysis process are updated risk register, risk probability and impact assessment, and risk urgency assessment."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Perform Quantitative Risk Analysis process?",
+				choices: ["Decision tree analysis", "Monte Carlo simulation", "Probability distributions", "Risk categorization"],
+				answer: "d",
+				explanation: "Risk categorization is not a tool or technique used in the Perform Quantitative Risk Analysis process. It is used in the Identify Risks process to group risks into categories. The tools and techniques for the Perform Quantitative Risk Analysis process are expert judgment, data gathering and representation techniques, probability distributions, simulation, and sensitivity analysis."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Risk Responses process?",
+				choices: ["Risk response plan", "Risk register updates", "Risk report", "Project document updates"],
+				answer: "c",
+				explanation: "Risk report is not an output of the Plan Risk Responses process. It is an output of the Monitor and Control Risks process. The outputs of the Plan Risk Responses process are risk response plan, updated risk register, and project document updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Implement Risk Responses process?",
+				choices: ["Contingent response strategies", "Expert judgment", "Risk reassessment", "Contracts"],
+				answer: "c",
+				explanation: "Risk reassessment is not a tool or technique used in the Implement Risk Responses process. It is used in the Monitor and Control Risks process to evaluate the effectiveness of risk responses. The tools and techniques for the Implement Risk Responses process are expert judgment, strategies for negative and positive risks, contingency plans, and contracts."
+			},
+			{
+				question: "Which of the following is not an output of the Control Risks process?",
+				choices: ["Work performance information", "Risk register updates", "Change requests", "Risk report"],
+				answer: "d",
+				explanation: "Risk report is not an output of the Control Risks process. It is an output of the Monitor and Control Risks process. The outputs of the Control Risks process are work performance information, risk register updates, and change requests."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Procurement Management process?",
+				choices: ["Bidder conferences", "Make-or-buy analysis", "Inspection and audits", "Market research"],
+				answer: "c",
+				explanation: "Inspection and audits are not a tool or technique used in the Plan Procurement Management process. They are used in the Control Procurements process to ensure that the procurement is progressing according to plan. The tools and techniques for the Plan Procurement Management process are make-or-buy analysis, expert judgment, market research, and bidder conferences."
+			},
+			{
+				question: "Which of the following is not an output of the Conduct Procurements process?",
+				choices: ["Selected sellers", "Change requests", "Proposals", "Bidder proposals"],
+				answer: "b",
+				explanation: "Change requests are not an output of the Conduct Procurements process. They are an output of the Control Procurements process. The outputs of the Conduct Procurements process are selected sellers, agreements, and bidder proposals."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Procurements process?",
+				choices: ["Claims administration", "Inspection and audits", "Procurement performance reviews", "Source selection analysis"],
+				answer: "d",
+				explanation: "Source selection analysis is not a tool or technique used in the Control Procurements process. It is used in the Conduct Procurements process to select the best seller. The tools and techniques for the Control Procurements process are performance reviews, payment systems, claims administration, and inspection and audits."
+			},
+			{
+ 				question: "Which of the following is not an output of the Plan Stakeholder Engagement process?",
+				choices: ["Stakeholder engagement plan", "Stakeholder register updates", "Stakeholder management plan", "Stakeholder analysis"],
+				answer: "d",
+				explanation: "Stakeholder analysis is not an output of the Plan Stakeholder Engagement process. It is a tool used in the process to identify stakeholders and analyze their needs and interests. The outputs of the Plan Stakeholder Engagement process are stakeholder engagement plan, stakeholder register updates, and stakeholder management plan."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Identify Stakeholders process?",
+				choices: ["Expert judgment", "Stakeholder analysis", "Data analysis", "Stakeholder engagement assessment matrix"],
+				answer: "d",
+				explanation: "Stakeholder engagement assessment matrix is not a tool or technique used in the Identify Stakeholders process. It is a tool used in the Plan Stakeholder Engagement process to evaluate the engagement level of stakeholders. The tools and techniques for the Identify Stakeholders process are expert judgment, data gathering techniques, and stakeholder analysis."
+			},
+			{
+				question: "Which of the following is not an output of the Plan Communications Management process?",
+				choices: ["Communications management plan", "Stakeholder engagement plan", "Project document updates", "Communications technology"],
+				answer: "d",
+				explanation: "Communications technology is not an output of the Plan Communications Management process. It is a tool used in the Manage Communications process to facilitate communication. The outputs of the Plan Communications Management process are communications management plan, stakeholder engagement plan, and project document updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Manage Communications process?",
+				choices: ["Information management systems", "Expert judgment", "Stakeholder engagement assessment matrix", "Communication technology"],
+				answer: "c",
+				explanation: "Stakeholder engagement assessment matrix is not a tool or technique used in the Manage Communications process. It is a tool used in the Plan Stakeholder Engagement process to evaluate the engagement level of stakeholders. The tools and techniques for the Manage Communications process are communication technology, information management systems, performance reporting, expert judgment, and meetings."
+			},
+			{
+				question: "Which of the following is not an output of the Monitor Communications process?",
+				choices: ["Work performance information", "Organizational process assets updates", "Change requests", "Communications report"],
+				answer: "c",
+				explanation: "Change requests are not an output of the Monitor Communications process. They are an output of the Perform Integrated Change Control process. The outputs of the Monitor Communications process are work performance information, communications report, and organizational process assets updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Stakeholder Management process?",
+				choices: ["Stakeholder engagement assessment matrix", "Expert judgment", "Stakeholder analysis", "Stakeholder register"],
+				answer: "a",
+				explanation: "Stakeholder engagement assessment matrix is not a tool or technique used in the Plan Stakeholder Management process. It is a tool used in the Manage Stakeholder Engagement process to evaluate the engagement level of stakeholders. The tools and techniques for the Plan Stakeholder Management process are expert judgment, data gathering techniques, stakeholder analysis, and stakeholder register."
+			},
+			{
+				question: "Which of the following is not an output of the Identify Stakeholders process ?",
+				choices: ["Stakeholder register", "Stakeholder analysis", "Stakeholder engagement plan", "Stakeholder management plan"],
+				answer: "c",
+				explanation: "Stakeholder engagement plan is not an output of the Identify Stakeholders process. It is an output of the Plan Stakeholder Engagement process. The outputs of the Identify Stakeholders process are stakeholder register, stakeholder analysis, and stakeholder management plan."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Plan Stakeholder Management process?",
+				choices: ["Stakeholder engagement assessment matrix", "Expert judgment", "Data gathering techniques", "Project management information system"],
+				answer: "a",
+				explanation: "Stakeholder engagement assessment matrix is not a tool or technique used in the Plan Stakeholder Management process. It is a tool used in the Manage Stakeholder Engagement process to evaluate the engagement level of stakeholders. The tools and techniques for the Plan Stakeholder Management process are expert judgment, data gathering techniques, and project management information system."
+			},
+			{
+				question: "Which of the following is not an output of the Manage Stakeholder Engagement process?",
+				choices: ["Change requests", "Stakeholder management plan updates", "Project document updates", "Stakeholder engagement assessment matrix"],
+				answer: "d",
+				explanation: "Stakeholder engagement assessment matrix is not an output of the Manage Stakeholder Engagement process. It is a tool used in the process to evaluate the engagement level of stakeholders. The outputs of the Manage Stakeholder Engagement process are change requests, stakeholder management plan updates, and project document updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Control Stakeholder Engagement process?",
+				choices: ["Expert judgment", "Stakeholder engagement assessment matrix", "Communication methods", "Information management systems"],
+				answer: "b",
+				explanation: "Stakeholder engagement assessment matrix is not a tool or technique used in the Control Stakeholder Engagement process. It is a tool used in the Manage Stakeholder Engagement process to evaluate the engagement level of stakeholders. The tools and techniques for the Control Stakeholder Engagement process are information management systems, expert judgment, communication methods, and change requests."
+			},
+			{
+				question: "Which of the following is not an output of the Control Stakeholder Engagement process?",
+				choices: ["Stakeholder engagement assessment matrix", "Work performance information", "Change requests", "Stakeholder management plan updates"],
+				answer: "a",
+				explanation: "Stakeholder engagement assessment matrix is not an output of the Control Stakeholder Engagement process. It is a tool used in the Manage Stakeholder Engagement process to evaluate the engagement level of stakeholders. The outputs of the Control Stakeholder Engagement process are work performance information, change requests, and stakeholder management plan updates."
+			},
+			{
+				question: "Which of the following is not a tool or technique used in the Develop Project Charter process?",
+				choices: ["Project selection methods", "Expert judgment", "Facilitation techniques", "Data analysis"],
+				answer: "a",
+				explanation: "Project selection methods are not a tool or technique used in the Develop Project Charter process. They are used in the Develop Project Management Plan process to select the project that will be executed. The tools and techniques for the Develop Project Charter process are expert judgment, facilitation techniques, and data analysis."
+},
+			{
+				question: "Which of the following is not an output of the Develop Project Charter process?",
+				choices: ["Project charter", "Assumption log", "Project selection criteria", "Project statement of work"],
+answer: "c",
+explanation: "Project selection criteria are not an output of the Develop Project Charter process. They are used in the project selection process to select the project that will be executed. The outputs of the Develop Project Charter process are project charter, assumption log, and project statement of work."
+},
+{
+question: "Which of the following is not a tool or technique used in the Develop Project Management Plan process?",
+choices: ["Data gathering techniques", "Project selection methods", "Expert judgment", "Facilitation techniques"],
+answer: "b",
+explanation: "Project selection methods are not a tool or technique used in the Develop Project Management Plan process. They are used in the project selection process to select the project that will be executed. The tools and techniques for the Develop Project Management Plan process are expert judgment, data gathering techniques, and facilitation techniques."
+},
+{
+question: "Which of the following is not an output of the Develop Project Management Plan process?",
+choices: ["Project management plan", "Project charter", "Project documents updates", "Assumption log"],
+answer: "b",
+explanation: "Project charter is not an output of the Develop Project Management Plan process. It is an input to the process. The outputs of the Develop Project Management Plan process are project management plan, project documents updates, and assumption log."
+},
+{
+question: "Which of the following is not a tool or technique used in the Direct and Manage Project Work process?",
+choices: ["Project management information system", "Expert judgment", "Data analysis", "Schedule compression"],
+answer: "d",
+explanation: "Schedule compression is not a tool or technique used in the Direct and Manage Project Work process. It is a technique used in the Develop Schedule process to compress the schedule duration. The tools and techniques for the Direct and Manage Project Work process are expert judgment, project management information system, and data analysis."
+},
+{
+question: "Which of the following is not an output of the Direct and Manage Project Work process?",
+choices: ["Deliverables", "Project management plan updates", "Change requests", "Quality control measurements"],
+answer: "b",
+explanation: "Project management plan updates are not an output of the Direct and Manage Project Work process. They are an output of the Perform Integrated Change Control process. The outputs of the Direct and Manage Project Work process are deliverables, work performance data, change requests, and quality control measurements."
+},
+{
+question: "Which of the following is not a tool or technique used in the Monitor and Control Project Work process?",
+choices: ["Project management information system", "Expert judgment", "Variance analysis", "Organizational process assets updates"],
+answer: "d",
+explanation: "Organizational process assets updates are not a tool or technique used in the Monitor and Control Project Work process. They are an output of the process. The tools and techniques for the Monitor and Control Project Work process are expert judgment, data analysis, project management information system, and variance analysis."
+},
+{
+question: "Which of the following is not an output of the Monitor and Control Project Work process?",
+choices: ["Quality control measurements", "Change requests", "Project management plan updates", "Deliverables"],
+answer: "d",
+explanation: "Deliverables are not an output of the Monitor and Control Project Work process. They are an output of the Direct and Manage Project Work process. The outputs of the Monitor and Control Project Work process are quality control measurements, work performance information, change requests, project management plan updates, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Integrated Change Control process?",
+choices: ["Expert judgment", "Data gathering techniques", "Change control tools", "Change requests"],
+answer: "b",
+explanation: "Data gathering techniques are not a tool or technique used in the Perform Integrated Change Control process. They are a tool used in the Define Scope process to collect information about the project scope. The tools and techniques for the Perform Integrated Change Control process are expert judgment, change control tools, and change requests."
+},
+{
+question: "Which of the following is not an output of the Perform Integrated Change Control process?",
+choices: ["Change log", "Approved change requests", "Project management plan updates", "Project document updates"],
+answer: "d",
+explanation: "Project document updates are not an output of the Perform Integrated Change Control process. They are an output of other processes such as the Control Quality process and the Control Procurements process. The outputs of the Perform Integrated Change Control process are change requests status updates, change log, approved change requests, and project management plan updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Close Project or Phase process?",
+choices: ["Expert judgment", "Product analysis", "Procurement audits", "Earned value management"],
+answer: "d",
+explanation: "Earned value management is not a tool or technique used in the Close Project or Phase process. It is a tool used in the Control Costs process to measure project performance. The tools and techniques for the Close Project or Phase process are expert judgment, product analysis, and procurement audits."
+},
+{
+question: "Which of the following is not an output of the Close Project or Phase process?",
+choices: ["Product documentation", "Final product, service, or result transition", "Lessons learned", "Enterprise environmental factors updates"],
+answer: "d",
+explanation: "Enterprise environmental factors updates are not an output of the Close Project or Phase process. They are an input to the process. The outputs of the Close Project or Phase process are final product, service, or result transition, product documentation, and lessons learned."
+},
+{
+question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+choices: ["Checklist analysis", "Expert judgment", "Risk data quality assessment", "Risk probability and impact assessment"],
+answer: "d",
+explanation: "Risk probability and impact assessment is not a tool or technique used in the Identify Risks process. It is a tool used in the Perform Qualitative Risk Analysis process to assess the probability and impact of identified risks. The tools and techniques for the Identify Risks process are expert judgment, documentation reviews, information gathering techniques, and checklist analysis."
+},
+{
+question: "Which of the following is not an output of the Identify Risks process?",
+choices: ["Risk register updates", "Risk report", "Project document updates", "Risk management plan"],
+answer: "b",
+explanation: "Risk report is not an output of the Identify Risks process. It is an output of the Perform Qualitative Risk Analysis process. The outputs of the Identify Risks process are risk register, risk management plan updates, and project document updates."
+},{
+question: "Which of the following is not a tool or technique used in the Perform Integrated Change Control process?",
+choices: ["Expert judgment", "Data gathering techniques", "Change control tools", "Change requests"],
+answer: "b",
+explanation: "Data gathering techniques are not a tool or technique used in the Perform Integrated Change Control process. They are a tool used in the Define Scope process to collect information about the project scope. The tools and techniques for the Perform Integrated Change Control process are expert judgment, change control tools, and change requests."
+},
+{
+question: "Which of the following is not an output of the Perform Integrated Change Control process?",
+choices: ["Change log", "Approved change requests", "Project management plan updates", "Project document updates"],
+answer: "d",
+explanation: "Project document updates are not an output of the Perform Integrated Change Control process. They are an output of other processes such as the Control Quality process and the Control Procurements process. The outputs of the Perform Integrated Change Control process are change requests status updates, change log, approved change requests, and project management plan updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Close Project or Phase process?",
+choices: ["Expert judgment", "Product analysis", "Procurement audits", "Earned value management"],
+answer: "d",
+explanation: "Earned value management is not a tool or technique used in the Close Project or Phase process. It is a tool used in the Control Costs process to measure project performance. The tools and techniques for the Close Project or Phase process are expert judgment, product analysis, and procurement audits."
+},
+{
+question: "Which of the following is not an output of the Close Project or Phase process?",
+choices: ["Product documentation", "Final product, service, or result transition", "Lessons learned", "Enterprise environmental factors updates"],
+answer: "d",
+explanation: "Enterprise environmental factors updates are not an output of the Close Project or Phase process. They are an input to the process. The outputs of the Close Project or Phase process are final product, service, or result transition, product documentation, and lessons learned."
+},
+{
+question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+choices: ["Checklist analysis", "Expert judgment", "Risk data quality assessment", "Risk probability and impact assessment"],
+answer: "d",
+explanation: "Risk probability and impact assessment is not a tool or technique used in the Identify Risks process. It is a tool used in the Perform Qualitative Risk Analysis process to assess the probability and impact of identified risks. The tools and techniques for the Identify Risks process are expert judgment, documentation reviews, information gathering techniques, and checklist analysis."
+},
+{
+question: "Which of the following is not an output of the Identify Risks process?",
+choices: ["Risk register updates", "Risk report", "Project document updates", "Risk management plan"],
+answer: "b",
+explanation: "Risk report is not an output of the Identify Risks process. It is an output of the Perform Qualitative Risk Analysis process. The outputs of the Identify Risks process are risk register, risk management plan updates, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Qualitative Risk Analysis process?",
+choices: ["Risk probability and impact assessment", "Expert judgment", "Data gathering and representation techniques", "Risk data quality assessment"],
+answer: "d",
+explanation: "Risk data quality assessment is not a tool or technique used in the Perform Qualitative Risk Analysis process. It is a tool used in the Plan Risk Management process to ensure that the quality of the risk data is sufficient for the project needs. The tools and techniques for the Perform Qualitative Risk Analysis process are expert judgment, data gathering and representation techniques, and risk probability and impact assessment."
+},
+{
+question: "Which of the following is not an output of the Perform Qualitative Risk Analysis process?",
+choices: ["Risk register updates", "Risk report", "Project document updates", "Risk management plan updates"],
+answer: "d",
+explanation: "Risk management plan updates are not an output of the Perform Qualitative Risk Analysis process. They are an output of the Plan Risk Management process. The outputs of the Perform Qualitative Risk Analysis process are updated risk register, risk report, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Quantitative Risk Analysis process?",
+choices: ["Expert judgment", "Data gathering and representation techniques", "Sensitivity analysis", "Risk probability and impact assessment"],
+answer: "d",
+explanation: "Risk probability and impact assessment is not a tool or technique used in the Perform Quantitative Risk Analysis process. It is a tool used in the Perform Qualitative Risk Analysis process to assess the probability and impact of identified risks. The tools and techniques for the Perform Quantitative Risk Analysis process are expert judgment, data gathering and representation techniques, and sensitivity analysis."
+},
+{
+question: "Which of the following is not an output of the Perform Quantitative Risk Analysis process?",
+choices: ["Risk register updates", "Risk report", "Project document updates", "Risk management plan updates"],
+answer: "a",
+explanation: "Risk register updates are not an output of the Perform Quantitative Risk Analysis process. They are an output of the Perform Qualitative Risk Analysis process. The outputs of the Perform Quantitative Risk Analysis process are updated risk register, risk report, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Plan Risk Responses process?",
+choices: ["Data gathering techniques", "Expert judgment", "Risk reassessment", "Risk register"],
+answer: "d",
+explanation: "Risk register is not a tool or technique used in the Plan Risk Responses process. It is an input to the process. The tools and techniques for the Plan Risk Responses process are expert judgment, data gathering techniques, and risk reassessment."
+},
+{
+question: "Which of the following is not an output of the Plan Risk Responses process?",
+choices: ["Risk response plan", "Risk register updates", "Project document updates", "Risk report"],
+answer: "d",
+explanation: "Risk report is not an output of the Plan Risk Responses process. It is an output of the Perform Qualitative Risk Analysis process. The outputs of the Plan Risk Responses process are risk response plan, risk register updates, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Risks process?",
+choices: ["Expert judgment", "Risk reassessment ", "Risk data quality assessment", "Data analysis techniques"],
+answer: "c",
+explanation: "Risk data quality assessment is not a tool or technique used in the Control Risks process. It is a tool used in the Plan Risk Management process to ensure that the quality of the risk data is sufficient for the project needs. The tools and techniques for the Control Risks process are expert judgment, data analysis techniques, and risk reassessment."
+},
+{
+question: "Which of the following is not an output of the Control Risks process?",
+choices: ["Risk register updates", "Change requests", "Project document updates", "Risk report"],
+answer: "d",
+explanation: "Risk report is not an output of the Control Risks process. It is an output of the Perform Qualitative Risk Analysis process. The outputs of the Control Risks process are updated risk register, change requests, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Plan Procurement Management process?",
+choices: ["Expert judgment", "Make-or-buy analysis", "Bidder conferences", "Data analysis techniques"],
+answer: "d",
+explanation: "Data analysis techniques are not a tool or technique used in the Plan Procurement Management process. They are a tool used in the Control Procurements process to evaluate procurement performance. The tools and techniques for the Plan Procurement Management process are expert judgment, market research, make-or-buy analysis, and bidder conferences."
+},
+{
+question: "Which of the following is not an output of the Plan Procurement Management process?",
+choices: ["Procurement management plan", "Procurement statement of work", "Make-or-buy decisions", "Procurement performance reviews"],
+answer: "d",
+explanation: "Procurement performance reviews are not an output of the Plan Procurement Management process. They are an output of the Control Procurements process. The outputs of the Plan Procurement Management process are procurement management plan, procurement statement of work, and make-or-buy decisions."
+},
+{
+question: "Which of the following is not a tool or technique used in the Conduct Procurements process?",
+choices: ["Expert judgment", "Proposal evaluation techniques", "Advertising", "Make-or-buy analysis"],
+answer: "d",
+explanation: "Make-or-buy analysis is not a tool or technique used in the Conduct Procurements process. It is a tool used in the Plan Procurement Management process to determine whether to make or buy a product or service. The tools and techniques for the Conduct Procurements process are expert judgment, advertising, and proposal evaluation techniques."
+},
+{
+question: "Which of the following is not an output of the Conduct Procurements process?",
+choices: ["Selected sellers", "Change requests", "Procurement documentation", "Project document updates"],
+answer: "b",
+explanation: "Change requests are not an output of the Conduct Procurements process. They are an output of the Control Procurements process. The outputs of the Conduct Procurements process are selected sellers, procurement documentation, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Procurements process?",
+choices: ["Procurement audits", "Performance reviews", "Contract change control system", "Contract closure"],
+answer: "d",
+explanation: "Contract closure is not a tool or technique used in the Control Procurements process. It is a process in the Project Procurement Management knowledge area. The tools and techniques for the Control Procurements process are procurement audits, performance reviews, and contract change control system."
+},
+{
+question: "Which of the following is not an output of the Control Procurements process?",
+choices: ["Contract closeout documents", "Procurement audits", "Work performance information", "Change requests"],
+answer: "b",
+explanation: "Procurement audits are not an output of the Control Procurements process. They are a tool used in the process to evaluate procurement performance. The outputs of the Control Procurements process are contract closeout documents, work performance information, and change requests."
+},
+{
+question: "Which of the following is not a tool or technique used in the Monitor and Control Project Work process?",
+choices: ["Expert judgment", "Earned value management", "Data analysis techniques", "Schedule network analysis"],
+answer: "d",
+explanation: "Schedule network analysis is not a tool or technique used in the Monitor and Control Project Work process. It is a tool used in the Develop Schedule process. The tools and techniques for the Monitor and Control Project Work process are expert judgment, data analysis techniques, and earned value management."
+},
+{
+question: "Which of the following is not an output of the Monitor and Control Project Work process?",
+choices: ["Work performance information", "Change requests", "Project management plan updates", "Contract closure"],
+answer: "d",
+explanation: "Contract closure is not an output of the Monitor and Control Project Work process. It is a process in the Project Procurement Management knowledge area. The outputs of the Monitor and Control Project Work process are work performance information, change requests, and project management plan updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Integrated Change Control process?",
+choices: ["Expert judgment", "Change control meetings", "Data analysis techniques", "Work performance information"],
+answer: "d",
+explanation: "Work performance information is not a tool or technique used in the Perform Integrated Change Control process. It is an input to the process. The tools and techniques for the process are expert judgment, change control meetings, and data analysis techniques."
+},
+{
+question: "Which of the following is not an output of the Perform Integrated Change Control process?",
+choices: ["Change requests", "Project management plan updates", "Project document updates", "Resource availability updates"],
+answer: "d",
+explanation: "Resource availability updates are not an output of the Perform Integrated Change Control process. They are an output of the Acquire Resources process. The outputs of the Perform Integrated Change Control process are change requests, project management plan updates, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Close Project or Phase process?",
+choices: ["Expert judgment", "Procurement audits", "Data analysis techniques", "Facilitation techniques"],
+answer: "b",
+explanation: "Procurement audits are not a tool or technique used in the Close Project or Phase process. They are a tool used in the Control Procurements process. The tools and techniques for the Close Project or Phase process are expert judgment, data analysis techniques, and facilitation techniques."
+},
+{
+question: "Which of the following is not an output of the Close Project or Phase process?",
+choices: ["Final product, service, or result transition", "Lessons learned", "Project document updates", "Contract closure"],
+answer: "d",
+explanation: "Contract closure is not an output of the Close Project or Phase process. It is a process in the Project Procurement Management knowledge area. The outputs of the Close Project or Phase process are final product, service, or result transition, lessons learned, and project document updates."
+},
+{
+question: "Which of the following is not a type of project selection model?",
+choices: ["Benefit measurement methods", "Scoring models", "Cost-benefit analysis", "Communication management"],
+answer: "d",
+explanation: "Communication management is not a type of project selection model. The three types of project selection models are benefit measurement methods, scoring models, and cost-benefit analysis."
+},
+{
+question: "Which of the following is not a component of the project charter?",
+choices: ["Business case", "Project scope statement", "Project objectives", "Stakeholder register"],
+answer: "d",
+explanation: "Stakeholder register is not a component of the project charter. It is an output of the Identify Stakeholders process. The components of the project charter are business case, project objectives, high-level requirements, high-level risks, summary milestone schedule, summary budget, and key stakeholder list."
+},
+{
+question: "Which of the following is not an input to the Develop Project Management Plan process?",
+choices: ["Project charter", "Project management information system", "Organizational process assets", "Lessons learned"],
+answer: "d",
+explanation: "Lessons learned is not an input to the Develop Project Management Plan process. It is an input to the Plan Risk Responses process. The inputs to the Develop Project Management Plan process are project charter, outputs from other planning processes, enterprise environmental factors, organizational process assets, and project management information system."
+},
+{
+question: "Which of the following is not an input to the Plan Scope Management process?",
+choices: ["Enterprise environmental factors", "Organizational process assets", "Project charter", "Stakeholder register"],
+answer: "d",
+explanation: "Stakeholder register is not an input to the Plan Scope Management process. It is an output of the Identify Stakeholders process. The inputs to the Plan Scope Management process are project charter, outputs from other planning processes, enterprise environmental factors, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Plan Scope Management process?",
+choices: ["Scope baseline", "Project document updates", "Change requests", "Project management plan updates"],
+answer: "a",
+explanation: "Scope baseline is not an output of the Plan Scope Management process. It is an output of the Define Scope process. The outputs of the Plan Scope Management process are project document updates, change requests, and project management plan updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Collect Requirements process?",
+choices: ["Expert judgment", "Focus groups", "Requirements management plan", "Facilitated workshops"],
+answer: "c",
+explanation: "Requirements management plan is not a tool or technique used in the Collect Requirements process. It is an output of the process. The tools and techniques for the Collect Requirements process are expert judgment, focus groups, facilitated workshops, and interviews."
+},
+{
+question: "Which of the following is not an output of the Collect Requirements process?",
+choices: ["Requirements traceability matrix", "Stake holder register", "Project scope statement", "Change requests"],
+answer: "d",
+explanation: "Change requests are not an output of the Collect Requirements process. They are an output of the Perform Integrated Change Control process. The outputs of the Collect Requirements process are requirements documentation, requirements traceability matrix, stakeholder register, and project scope statement."
+},
+{
+question: "Which of the following is not a tool or technique used in the Define Scope process?",
+choices: ["Expert judgment", "Product analysis", "Project management software", "Facilitated workshops"],
+answer: "c",
+explanation: "Project management software is not a tool or technique used in the Define Scope process. The tools and techniques for the Define Scope process are expert judgment, product analysis, and facilitated workshops."
+},
+{
+question: "Which of the following is not an output of the Define Scope process?",
+choices: ["Work performance information", "Project document updates", "Project scope statement", "Requirements documentation"],
+answer: "a",
+explanation: "Work performance information is not an output of the Define Scope process. It is an output of the Control Quality process. The outputs of the Define Scope process are project scope statement, requirements documentation, and project document updates."
+},
+{
+question: "Which of the following is not an input to the Create WBS process?",
+choices: ["Project scope statement", "Project management plan", "Project document updates", "Resource calendars"],
+answer: "d",
+explanation: "Resource calendars are not an input to the Create WBS process. The inputs to the process are project scope statement, project management plan, requirements documentation, and project document updates."
+},
+{
+question: "Which of the following is not an output of the Create WBS process?",
+choices: ["Project scope statement updates", "WBS dictionary", "Scope baseline", "Resource breakdown structure"],
+answer: "d",
+explanation: "Resource breakdown structure is not an output of the Create WBS process. The output of the process is the WBS and the WBS dictionary, which are used to create the scope baseline."
+},
+{
+question: "Which of the following is not a tool or technique used in the Validate Scope process?",
+choices: ["Inspection", "Expert judgment", "Change requests", "Control charts"],
+answer: "d",
+explanation: "Control charts are not a tool or technique used in the Validate Scope process. The tools and techniques for the process are inspection, group decision-making techniques, and expert judgment. Change requests may also be an output of the process."
+},
+{
+question: "Which of the following is not an output of the Validate Scope process?",
+choices: ["Work performance information", "Accepted deliverables", "Change requests", "Quality control measurements"],
+answer: "a",
+explanation: "Work performance information is not an output of the Validate Scope process. It is an output of the Control Quality process. The outputs of the Validate Scope process are accepted deliverables, change requests, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Scope process?",
+choices: ["Variance analysis", "Expert judgment", "Project management software", "Inspection"],
+answer: "d",
+explanation: "Inspection is not a tool or technique used in the Control Scope process. The tools and techniques for the process are variance analysis, trend analysis, and change control system. Project management software may also be used."
+},
+{
+question: "Which of the following is not an output of the Control Scope process?",
+choices: ["Work performance information", "Revised WBS", "Revised project scope statement", "Change requests"],
+answer: "a",
+explanation: "Work performance information is not an output of the Control Scope process. It is an output of the Control Quality process. The outputs of the Control Scope process are change requests, project document updates, revised project scope statement, and revised WBS."
+},
+{
+question: "Which of the following is not a tool or technique used in the Plan Schedule Management process?",
+choices: ["Schedule model", "Expert judgment", "Data analysis", "Work performance information"],
+answer: "d",
+explanation: "Work performance information is not a tool or technique used in the Plan Schedule Management process. It is an input to the process. The tools and techniques for the Plan Schedule Management process are expert judgment, analytical techniques, and meetings."
+},
+{
+question: "Which of the following is not an input to the Define Activities process?",
+choices: ["Project scope statement", "Organizational process assets", "Risk register", "Activity attributes"],
+answer: "c",
+explanation: "Risk register is not an input to the Define Activities process. It is an input to the Plan Risk Management process. The inputs to the Define Activities process are project scope statement, enterprise environmental factors, organizational process assets, and activity lists, milestones, and deliverables."
+},
+{
+question: "Which of the following is not an output of the Define Activities process?",
+choices: ["Activity duration estimates", "Activity list", "Schedule network diagrams", "Project document updates"],
+answer: "d",
+explanation: "Project document updates are not an output of the Define Activities process. The outputs of the process are activity list, activity attributes, milestone list, change requests, and updates to the activity list, activity attributes, and milestone list."
+},
+{
+question: "Which of the following is not a tool or technique used in the Sequence Activities process?",
+choices: ["Expert judgment", "Precedence diagramming method", "Schedule network templates", "Critical path analysis"],
+answer: "c",
+explanation: "Schedule network templates are not a tool or technique used in the Sequence Activities process. The tools and techniques for the process are precedence diagramming method, dependency determination, leads and lags, and schedule network templates. Expert judgment may also be used."
+},
+{
+question: "Which of the following is not an output of the Sequence Activities process?",
+choices: ["Project document updates", "Project schedule network diagrams", "Activity list updates", "Activity attribute updates"],
+answer: "a",
+explanation: "Project document updates are not an output of the Sequence Activities process. The outputs of the process are project schedule network diagrams, activity list updates, activity attribute updates, and milestone list."
+},
+{
+question: "Which of the following is not a tool or technique used in the Estimate Activity Durations process?",
+choices: ["Analogous estimating", "Bottom-up estimating", "Three-point estimating", "Variance analysis"],
+answer: "d",
+explanation: "Variance analysis is not a tool or technique used in the Estimate Activity Durations process. The tools and techniques for the process are analogous estimating, parametric estimating, three-point estimating, expert judgment, and reserve analysis."
+},
+{			question: "Which of the following is not an output of the Estimate Activity Durations process?",
+			choices: ["Activity duration estimates", "Basis of estimates", "Schedule baseline", "Resource breakdown structure"],
+			answer: "d",
+			explanation: "Resource breakdown structure is not an output of the Estimate Activity Durations process. The outputs of the process are activity duration estimates, basis of estimates, resource requirements, updates to the project document, and project document updates."
+		},
+		{
+			question: "Which of the following is not a tool or technique used in the Develop Schedule process?",
+			choices: ["Schedule network analysis", "Critical path method", "Earned value management", "Variance analysis"],
+			answer: "d",
+			explanation: "Variance analysis is not a tool or technique used in the Develop Schedule process. The tools and techniques for the process are critical path method, schedule network analysis, what-if scenario analysis, resource optimization techniques, and modeling techniques such as Monte Carlo analysis. Earned value management may also be used."
+		},
+		{
+			question: "Which of the following is not an output of the Develop Schedule process?",
+			choices: ["Project document updates", "Project schedule", "Schedule data", "Project calendars"],
+			answer: "d",
+			explanation: "Project calendars are not an output of the Develop Schedule process. The outputs of the process are project schedule, schedule data, project document updates, and change requests."
+		},
+		{
+			question: "Which of the following is not a tool or technique used in the Control Schedule process?",
+			choices: ["Resource optimization techniques", "Variance analysis", "Project management software", "Performance reporting"],
+			answer: "a",
+			explanation: "Resource optimization techniques are not a tool or technique used in the Control Schedule process. The tools and techniques for the process are variance analysis, performance reviews, project management software, and change control system. Performance reporting may also be used."
+		},
+		{
+			question: "Which of the following is not an output of the Control Schedule process?",
+			choices: ["Project document updates", "Schedule baseline", "Schedule data", "Resource breakdown structure"],
+			answer: "d",
+			explanation: "Resource breakdown structure is not an output of the Control Schedule process. The outputs of the process are work performance information, schedule forecasts, change requests, project management plan updates, project document updates, and organizational process assets updates."
+		},
+		{
+			question: "Which of the following is not an input to the Plan Cost Management process?",
+			choices: ["Project management plan", "Project charter", "Enterprise environmental factors", "Work performance data"],
+			answer: "d",
+			explanation: "Work performance data is not an input to the Plan Cost Management process. It is an input to the Control Costs process. The inputs to the Plan Cost Management process are project management plan, project charter, enterprise environmental factors, and organizational process assets."
+		},
+		{
+			question: "Which of the following is not an output of the Plan Cost Management process?",
+			choices: ["Cost baseline", "Project funding requirements", "Project document updates", "Activity cost estimates"],
+			answer: "c",
+			explanation: "Project document updates are not an output of the Plan Cost Management process. The outputs of the process are cost management plan, cost baseline, project funding requirements, and activity cost estimates."
+		},
+		{
+			question: "Which of the following is not a tool or technique used in the Estimate Costs process?",
+			choices: ["Expert judgment", "Bottom-up estimating", "Regression analysis", "Resource optimization techniques"],
+answer: "d",
+explanation: "Resource optimization techniques are not a tool or technique used in the Estimate Costs process. The tools and techniques for the process are expert judgment, analogous estimating, parametric estimating, bottom-up estimating, three-point estimating, and reserve analysis. Regression analysis may also be used."
+},
+{
+question: "Which of the following is not an output of the Estimate Costs process?",
+choices: ["Cost performance baseline", "Basis of estimates", "Project document updates", "Project funding requirements"],
+answer: "d",
+explanation: "Project funding requirements are not an output of the Estimate Costs process. The outputs of the process are activity cost estimates, basis of estimates, project document updates, and cost management plan updates. The cost performance baseline is an output of the Control Costs process."
+},
+{
+question: "Which of the following is not an input to the Determine Budget process?",
+choices: ["Cost baseline", "Project schedule", "Resource requirements", "Project charter"],
+answer: "c",
+explanation: "Resource requirements are not an input to the Determine Budget process. The inputs to the process are cost management plan, cost baseline, project schedule, resource calendars, risk register, agreements, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Determine Budget process?",
+choices: ["Cost baseline updates", "Project funding requirements", "Project document updates", "Risk register updates"],
+answer: "d",
+explanation: "Risk register updates are not an output of the Determine Budget process. The outputs of the process are cost baseline, project funding requirements, project document updates, and change requests."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Costs process?",
+choices: ["Expert judgment", "Data analysis", "Project management software", "Resource leveling"],
+answer: "d",
+explanation: "Resource leveling is not a tool or technique used in the Control Costs process. The tools and techniques for the process are expert judgment, data analysis, project management software, forecasting methods, and funding limit reconciliation. Cost aggregation is also used."
+},
+{
+question: "Which of the following is not an output of the Control Costs process?",
+choices: ["Project document updates", "Work performance information", "Project funding requirements", "Cost baseline"],
+answer: "c",
+explanation: "Project funding requirements are not an output of the Control Costs process. The outputs of the process are work performance information, cost forecasts, change requests, project management plan updates, project document updates, and organizational process assets updates."
+},
+{
+question: "Which of the following is not an input to the Plan Quality Management process?",
+choices: ["Project management plan", "Project charter", "Organizational process assets", "Cost management plan"],
+answer: "d",
+explanation: "Cost management plan is not an input to the Plan Quality Management process. The inputs to the process are project management plan, project charter, stakeholder register, enterprise environmental factors, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Plan Quality Management process?",
+choices: ["Quality management plan", "Process improvement plan", "Project document updates", "Quality metrics"],
+answer: "d",
+explanation: "Quality metrics are not an output of the Plan Quality Management process. The outputs of the process are quality management plan, process improvement plan, quality metrics, and project document updates. Quality metrics may be an output of the Manage Quality process."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Quality Assurance process?",
+choices: ["Control charts", "Benchmarking", "Design for X", "Statistical sampling"],
+answer: "c",
+explanation: "Design for X is not a tool or technique used in the Perform Quality Assurance process. The tools and techniques for the process are quality management and control tools, process analysis, quality audits, and process improvement plan. Benchmarking and statistical sampling may also be used."
+},
+{
+question: "Which of the following is not an output of the Perform Quality Assurance process?",
+choices: ["Quality metrics", "Quality control measurements", "Project document updates", "Quality reports"],
+answer: "b",
+explanation: "Quality control measurements are not an output of the Perform Quality Assurance process. The outputs of the process are quality reports, change requests, and project document updates. Quality metrics may be an output of the Manage Quality process."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Quality process?",
+choices: ["Inspection", "Statistical sampling", "Flowcharting", "Design for X"],
+answer: "d",
+explanation: "Design for X is not a tool or technique used in the Control Quality process. The tools and techniques for the process are inspection, statistical sampling, control charts, Pareto charts, flowcharting, and trend analysis. "
+},
+{
+question: "Which of the following is not an output of the Control Quality process?",
+choices: ["Quality control measurements", "Accepted deliverables", "Verified deliverables", "Change requests"],
+answer: "a",
+explanation: "Quality control measurements are not an output of the Control Quality process. The outputs of the process are verified deliverables, work performance information, change requests, project management plan updates, project document updates, and organizational process assets updates."
+},
+{
+question: "Which of the following is not an input to the Plan Resource Management process?",
+choices: ["Project management plan", "Resource calendars", "Enterprise environmental factors", "Work performance reports"],
+answer: "d",
+explanation: "Work performance reports are not an input to the Plan Resource Management process. The inputs to the process are project management plan, enterprise environmental factors, organizational process assets, and project charter. Resource calendars and project documents may also be used as inputs."
+},
+{
+question: "Which of the following is not an output of the Plan Resource Management process?",
+choices: ["Resource requirements", "Team charter", "Resource management plan", "Change requests"],
+answer: "d",
+explanation: "Change requests are not an output of the Plan Resource Management process. The outputs of the process are resource management plan, resource requirements, team charter, and project document updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Estimate Activity Resources process?",
+choices: ["Resource breakdown structure", "Expert judgment", "Published estimating data", "Bottom-up estimating"],
+answer: "a",
+explanation: "Resource breakdown structure is not a tool or technique used in the Estimate Activity Resources process. The tools and techniques for the process are expert judgment, alternative analysis, published estimating data, project management software, and bottom-up estimating."
+},
+{
+question: "Which of the following is not an output of the Estimate Activity Resources process?",
+choices: ["Resource assignments", "Resource breakdown structure", "Project document updates", "Activity resource requirements"],
+answer: "b",
+explanation: "Resource breakdown structure is not an output of the Estimate Activity Resources process. The outputs of the process are activity resource requirements, resource assignments, resource calendars, and project document updates."
+},
+{
+question: "Which of the following is not an input to the Acquire Resources process?",
+choices: ["Resource management plan", "Project document updates", "Make-or-buy decisions", "Project schedule"],
+answer: "b",
+explanation: "Project document updates are not an input to the Acquire Resources process. The inputs to the process are human resource management plan, procurement management plan, project schedule, activity resource requirements, and external enterprise environmental factors."
+},
+{
+question: "Which of the following is not an output of the Acquire Resources process?",
+choices: ["Project staff assignments", "Change requests", "Project document updates", "Project team performance assessments"],
+answer: "d",
+explanation: "Project team performance assessments are not an output of the Acquire Resources process. The outputs of the process are project staff assignments, resource calendars, change requests, project document updates, and enterprise environmental factor updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Develop Team process?",
+choices: ["Observation and conversation", "Team-building activities", "Expert judgment", "Resource leveling"],
+answer: "d",
+explanation: "Resource leveling is not a tool or technique used in the Develop Team process. The tools and techniques for the process are observation and conversation, interpersonal skills, team-building activities, and training. Expert judgment may also be used."
+},
+{
+question: "Which of the following is not an output of the Develop Team process?",
+choices: ["Team performance assessments", "Enterprise environmental factor updates", "Project staff assignments", "Project document updates"],
+answer: "d",
+explanation: "Project document updates are not an output of the Develop Team process. The outputs of the process are team performance assessments, enterprise environmental factor updates, change requests, project management plan updates, and organizational process assets updates."
+},
+{
+question: "Which of the following is not an input to the Manage Team process?",
+choices: ["Project staff assignments", "Project schedule", "Team performance assessments", "Resource calendars"],
+answer: "d",
+explanation: "Resource calendars are not an input to the Manage Team process. The inputs to the process are project management plan, project documents, work performance reports, and enterprise environmental factors. "
+},
+{
+question: "Which of the following is not an output of the Manage Team process?",
+choices: ["Change requests", "Project management plan updates", "Project document updates", "Work performance reports"],
+answer: "d",
+explanation: "Work performance reports are not an output of the Manage Team process. The outputs of the process are change requests, project management plan updates, project document updates, and enterprise environmental factor updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+choices: ["Expert judgment", "Risk breakdown structure", "Assumptions analysis", "Delphi technique"],
+answer: "b",
+explanation: "Risk breakdown structure is not a tool or technique used in the Identify Risks process. The tools and techniques for the process are expert judgment, assumptions analysis, SWOT analysis, and the Delphi technique. Documentation reviews may also be used."
+},
+{
+question: "Which of the following is not an output of the Identify Risks process?",
+choices: ["Risk register updates", "Change requests", "Project document updates", "Risk management plan updates"],
+answer: "b",
+explanation: "Change requests are not an output of the Identify Risks process. The outputs of the process are risk register updates, risk report, and project document updates. The risk management plan may also be updated."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Qualitative Risk Analysis process?",
+choices: ["Probability-impact matrix", "Risk categorization", "Delphi technique", "Quantitative risk analysis"],
+answer: "d",
+explanation: "Quantitative risk analysis is not a tool or technique used in the Perform Qualitative Risk Analysis process. The tools and techniques for the process are probability-impact matrix, risk categorization, risk data quality assessment, and risk urgency assessment. The Delphi technique and expert judgment may also be used."
+},
+{
+question: "Which of the following is not an output of the Perform Qualitative Risk Analysis process?",
+choices: ["Risk register updates", "Change requests", "Project document updates", "Risk report"],
+answer: "b",
+explanation: "Change requests are not an output of the Perform Qualitative Risk Analysis process. The outputs of the process are risk register updates, risk report, and project document updates. The risk management plan may also be updated."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Quantitative Risk Analysis process?",
+choices: ["Decision tree analysis", "Expected monetary value analysis", "Cost-benefit analysis", "Monte Carlo analysis"],
+answer: "c",
+explanation: "Cost-benefit analysis is not a tool or technique used in the Perform Quantitative Risk Analysis process. The tools and techniques for the process are data gathering and representation techniques, quantitative risk analysis and modeling techniques, and expert judgment. The techniques used include decision tree analysis, expected monetary value analysis, and Monte Carlo analysis."
+},
+{
+question: "Which of the following is not an output of the Perform Quantitative Risk Analysis process?",
+choices: ["Risk register updates", "Change requests", "Project document updates", "Risk report"],
+answer: "b",
+explanation: "Change requests are not an output of the Perform Quantitative Risk Analysis process. The outputs of the process are risk register updates, risk report, and project document updates. The risk management plan may also be updated."
+},
+{
+question: "Which of the following is not a tool or technique used in the Plan Risk Responses process?",
+choices: ["Expert judgment", "Risk breakdown structure", "Strategies for negative risks", "Strategies for positive risks"],
+answer: "b",
+explanation: "Risk breakdown structure is not a tool or technique used in the Plan Risk Responses process. The tools and techniques for the process are expert judgment, strategies for negative risks or threats, strategies for positive risks or opportunities, and contingency reserves. Risk reassessment may also be used."
+},
+{
+question: "Which of the following is not an output of the Plan Risk Responses process?",
+choices: ["Risk register updates", "Change requests", "Project document updates", "Risk report"],
+answer: "a",
+explanation: "Risk register updates are not an output of the Plan Risk Responses process. The outputs of the process are a risk management plan, project document updates, change requests, and updates to the project management plan and project documents. A risk report may also be produced."
+},
+{
+question: "Which of the following is not a tool or technique used in the Implement Risk Responses process?",
+choices: ["Contingent response strategies", "Residual risk analysis", "Risk reassessment", "Workarounds"],
+answer: "c",
+explanation: "Risk reassessment is not a tool or technique used in the Implement Risk Responses process. The tools and techniques for the process are expert judgment, contingency planning, workarounds, and risk-related contract decisions. Residual risk analysis may also be used."
+},
+{
+question: "Which of the following is not an output of the Implement Risk Responses process?",
+choices: ["Risk register updates", "Project document updates", "Change requests", "Risk report"],
+answer: "d",
+explanation: "Risk report is not an output of the Implement Risk Responses process. The outputs of the process are risk register updates, project document updates, change requests, and updates to the project management plan and project documents."
+},
+{
+question: "Which of the following is not an input to the Monitor Risks process?",
+choices: ["Risk register", "Project management plan", "Project document updates", "Project schedule"],
+answer: "d",
+explanation: "Project schedule is not an input to the Monitor Risks process. The inputs to the process are risk register, risk management plan, project management plan, project documents, work performance data, and work performance reports."
+},
+{
+question: "Which of the following is not an output of the Monitor Risks process?",
+choices: ["Risk register updates", "Project document updates", "Change requests", "Risk management plan updates"],
+answer: "d",
+explanation: "Risk management plan updates are not an output of the Monitor Risks process. The outputs of the process are risk register updates, project document updates, change requests, and updates to the project management plan and project documents."
+},
+{
+question: "Which of the following is not an input to the Perform Integrated Change Control process?",
+choices: ["Risk management plan", "Project management plan", "Change control system", "Change requests"],
+answer: "a",
+explanation: "Risk management plan is not an input to the Perform Integrated Change Control process. The inputs to the process are project management plan, change control system, work performance reports, and change requests."
+},
+{
+question: "Which of the following is not an output of the Perform Integrated Change Control process?",
+choices: ["Approved change requests", "Change log", "Project management plan updates", "Risk report"],
+answer: "d",
+explanation: "Risk report is not an output of the Perform Integrated Change Control process. The outputs of the process are approved change requests, change log, project management plan updates, project document updates, and updates to the organizational process assets."
+},
+{
+question: "Which of the following is not a tool or technique used in the Close Procurements process?",
+choices: ["Expert judgment", "Contract audits", "Performance reporting", "Procurement negotiations"],
+answer: "c",
+explanation: "Performance reporting is not a tool or technique used in the Close Procurements process. The tools and techniques for the process are expert judgment, contract audits, procurement negotiations, and records management system. The outputs of the process are closed procurements, procurement documentation, and organizational process asset updates."
+},
+{
+question: "Which of the following is not an output of the Close Procurements process?",
+choices: ["Closed procurements", "Procurement documentation", "Organizational process asset updates", "Contract management plan"],
+answer: "d",
+explanation: "Contract management plan is not an output of the Close Procurements process. The outputs of the process are closed procurements, procurement documentation, and updates to the organizational process assets."
+},
+{
+question: "Which of the following is not a process in the Project Risk Management knowledge area?",
+choices: ["Plan Risk Responses", "Perform Qualitative Risk Analysis", "Perform Quantitative Risk Analysis", "Control Risks"],
+answer: "d",
+explanation: "Control Risks is not a process in the Project Risk Management knowledge area. The four processes in the knowledge area are Plan Risk Management, Identify Risks, Perform Qualitative Risk Analysis, and Perform Quantitative Risk Analysis."
+},
+{
+question: "Which of the following is not a category of the Risk Breakdown Structure (RBS)?",
+choices: ["Technical risks", "Organizational risks", "Environmental risks", "Internal risks"],
+answer: "d",
+explanation: "Internal risks is not a category of the Risk Breakdown Structure (RBS). The categories in the RBS may include technical risks, organizational risks, external risks, and project management risks."
+},
+{
+question: "Which of the following is not an objective of the Plan Risk Management process?",
+choices: ["Defining how to conduct risk management activities", "Determining which risks may affect the project", "Determining how to execute risk management activities", "Determining how to communicate risk management activities"],
+answer: "b",
+explanation: "Determining which risks may affect the project is not an objective of the Plan Risk Management process. The objectives of the process are to define how to conduct risk management activities, determine risk management methodology, determine roles and responsibilities, determine how to execute risk management activities, and determine how to communicate and report on risk management activities."
+},
+{
+question: "Which of the following is not an input to the Plan Risk Management process?",
+choices: ["Risk register", "Project charter", "Organizational process assets", "Project management plan updates"],
+answer: "d",
+explanation: "Project management plan updates are not an input to the Plan Risk Management process. The inputs to the process are project charter, project management plan, stakeholder register, organizational process assets, and enterprise environmental factors."
+},
+{
+question: "Which of the following is not an output of the Plan Risk Management process?",
+choices: ["Risk register", "Project document updates", "Project management plan updates", "Change requests"],
+answer: "d",
+explanation: "Change requests are not an output of the Plan Risk Management process. The outputs of the process are a risk management plan, project document updates, and updates to the project management plan and project documents. A risk register may also be produced."
+},
+{
+question: "Which of the following is not a tool or technique used in the Identify Risks process?",
+choices: ["Expert judgment", "Assumptions analysis", "SWOT analysis", "Risk data quality assessment"],
+answer: "c",
+explanation: "SWOT analysis is not a tool or technique used in the Identify Risks process. The tools and techniques for the process are expert judgment, documentation reviews, information gathering techniques, checklist analysis, and assumptions analysis. Risk data quality assessment may also be used."
+},
+{
+question: "Which of the following is not an output of the Identify Risks process?",
+choices: ["Risk register updates", "Project document updates", "Change requests", "Risk management plan updates"],
+answer: "d",
+explanation: "Risk management plan updates are not an output of the Identify Risks process. The outputs of the process are a risk register, project document updates, and updates to the project management plan and project documents."
+},
+{
+question: "Which of the following is not a type of risk response?",
+choices: ["Avoidance", "Transference", "Mitigation", "Extermination"],
+answer: "d",
+explanation: "Extermination is not a type of risk response. The types of risk response are avoidance, transference, mitigation, and acceptance."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Qualitative Risk Analysis process?",
+choices: ["Risk probability and impact assessment", "Expert judgment", "Data gathering and representation techniques", "Decision tree analysis"],
+answer: "d",
+explanation: "Decision tree analysis is not a tool or technique used in the Perform Qualitative Risk Analysis process. The tools and techniques for the process are expert judgment, data gathering and representation techniques, probability and impact assessment, and risk categorization. Risk urgency assessment may also be used."
+},
+{
+question: "Which of the following is not an output of the Perform Qualitative Risk Analysis process?",
+choices: ["Risk register updates", "Project document updates", "Change requests", "Risk probability and impact matrix"],
+answer: "d",
+explanation: "Risk probability and impact matrix is not an output of the Perform Qualitative Risk Analysis process. The outputs of the process are risk register updates, project document updates, and updates to the probability and impact assessment and risk ranking. A risk report may also be produced."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Quantitative Risk Analysis process?",
+choices: ["Data gathering and representation techniques", "Expert judgment", "Risk probability and impact assessment", "Monte Carlo analysis"],
+answer: "c",
+explanation: "Risk probability and impact assessment is not a tool or technique used in the Perform Quantitative Risk Analysis process. The tools and techniques for the process are expert judgment, data gathering and representation techniques, quantitative risk analysis and modeling techniques, and Monte Carlo analysis. Sensitivity analysis may also be used."
+},
+{
+question: "Which of the following is not an output of the Perform Quantitative Risk Analysis process?",
+choices: ["Risk register updates", "Project document updates", "Risk probability and impact matrix", "Trend analysis"],
+answer: "d",
+explanation: "Trend analysis is not an output of the Perform Quantitative Risk Analysis process. The outputs of the process are risk register updates, project document updates, updates to the probability and impact assessment and risk ranking, and updates to the quantitative risk analysis and modeling. A risk report may also be produced."
+},
+{
+question: "Which of the following is not an input to the Control Risks process?",
+choices: ["Risk register", "Project management plan", "Risk management plan", "Project charter"],
+answer: "c",
+explanation: "Risk management plan is not an input to the Control Risks process. The inputs to the process are risk register, risk management plan, project management plan, work performance data, work performance reports, and change requests."
+},
+{
+question: "Which of the following is not an output of the Control Risks process?",
+choices: ["Updates to the risk register", "Updates to the risk management plan", "Updates to the project management plan", "Updates to the stakeholder register"],
+answer: "d",
+explanation: "Updates to the stakeholder register are not an output of the Control Risks process. The outputs of the process are updates to the risk register, risk management plan, and project management plan. Change requests may also be produced."
+},
+{
+question: "Which of the following is not a type of control used in the Control Risks process?",
+choices: ["Corrective action", "Defect repair", "Risk avoidance", "Risk acceptance"],
+answer: "c",
+explanation: "Risk avoidance is not a type of control used in the Control Risks process. The types of control used in the process are risk acceptance, risk mitigation, corrective action, and defect repair."
+},
+{
+question: "Which of the following is not an input to the Close Project or Phase process?",
+choices: ["Project charter", "Project management plan", "Stakeholder register", "Project document updates"],
+answer: "d",
+explanation: "Project document updates are not an input to the Close Project or Phase process. The inputs to the process are project charter, project management plan, accepted deliverables, organizational process assets, and enterprise environmental factors."
+},
+{
+question: "Which of the following is not an output of the Close Project or Phase process?",
+choices: ["Final product, service, or result transition", "Organizational process asset updates", "Lessons learned", "Project archives"],
+answer: "d",
+explanation: "Project archives are not an output of the Close Project or Phase process. The outputs of the process are final product, service, or result transition, organizational process asset updates, and lessons learned. The project files may be stored in a records management system."
+},
+{
+question: "Which of the following is not a benefit of project management?",
+choices: ["Improved customer satisfaction", "Improved employee morale", "Decreased productivity", "Reduced costs"],
+answer: "c",
+explanation: "Decreased productivity is not a benefit of project management. The benefits of project management include improved customer satisfaction, improved employee morale, reduced costs, and increased productivity."
+},
+{
+question: "Which of the following is not a responsibility of the project manager?",
+choices: ["Defining the project scope", "Monitoring project progress", "Approving project funding", "Communicating with stakeholders"],
+answer: "c",
+explanation: "Approving project funding is not a responsibility of the project manager. The responsibilities of the project manager include defining the project scope, creating the project plan, monitoring project progress, managing project risks and issues, managing project resources, communicating with stakeholders, and delivering the project on time and within budget."
+},
+{
+question: "Which of the following is not a component of the Project Management Plan?",
+choices: ["Work Breakdown Structure (WBS)", "Risk Management Plan", "Stakeholder Management Plan", "Project Schedule Baseline"],
+answer: "d",
+explanation: "Project Schedule Baseline is not a component of the Project Management Plan. The components of the plan are the scope statement, schedule management plan, cost management plan, quality management plan, resource management plan, communications management plan, risk management plan, procurement management plan, stakeholder management plan, and change management plan."
+},
+{
+question: "Which of the following is not an element of the Triple Constraint?",
+choices: ["Time", "Scope", "Quality", "Cost"],
+answer: "c",
+explanation: "Quality is not an element of the Triple Constraint. The elements of the Triple Constraint are time, scope, and cost. Quality is often considered a fourth constraint."
+},
+{
+question: "Which of the following is not a component of the WBS?",
+choices: ["Work packages", "Deliverables", "Control accounts", "Time-phased budget"],
+answer: "d",
+explanation: "Time-phased budget is not a component of the WBS. The components of the WBS are work packages, deliverables, and control accounts."
+},
+{
+question: "Which of the following is not a technique used in the Define Scope process?",
+choices: ["Product analysis", "Expert judgment", "Delphi technique", "Requirements traceability"],
+answer: "d",
+explanation: "Requirements traceability is not a technique used in the Define Scope process. The techniques for the process are expert judgment, product analysis, alternative generation, and the Delphi technique."
+},
+{
+question: "Which of the following is not a tool or technique used in the Create WBS process?",
+choices: ["Expert judgment", "Decomposition", "Scope baseline", "Mind mapping"],
+answer: "c",
+explanation: "Scope baseline is not a tool or technique used in the Create WBS process. The tools and techniques for the process are expert judgment, decomposition, mind mapping, and the nominal group technique. The project scope statement and requirements documentation may also be used."
+},
+{
+question: "Which of the following is not an input to the Validate Scope process?",
+choices: ["Project management plan", "Requirements documentation", "Requirements traceability matrix", "Change requests"],
+answer: "d",
+explanation: "Change requests are not an input to the Validate Scope process. The inputs to the process are project management plan, requirements documentation, requirements traceability matrix, verified deliverables, work performance data, and organizational process assets."
+},
+{
+question: "Which of the following is not a component of the Project Scope Statement?",
+choices: ["Project objectives", "Project assumptions", "Project charter", "Project boundaries"],
+answer: "c",
+explanation: "Project charter is not a component of the Project Scope Statement. The components of the statement are project objectives, project description, project requirements, project boundaries, project deliverables, project acceptance criteria, project constraints, project assumptions, and project exclusions."
+},
+{
+question: "Which of the following is not a characteristic of a good project scope statement?",
+choices: ["It is measurable", "It is concise", "It is ambiguous", "It is clear and specific"],
+answer: "c",
+explanation: "Ambiguity is not a characteristic of a good project scope statement. The characteristics of a good statement are that it is clear and specific, measurable, concise, and testable."
+},
+{
+question: "Which of the following is not a technique used in the Collect Requirements process?",
+choices: ["Facilitated workshops", "Interviews", "Observation", "Delphi technique"],
+answer: "d",
+explanation: "Delphi technique is not a technique used in the Collect Requirements process. The techniques for the process are brainstorming, focus groups, facilitated workshops, interviews, observation, surveys, and prototypes."
+},
+{
+question: "Which of the following is not an input to the Define Activities process?",
+choices: ["Project scope statement", "Activity list", "Activity attributes", "Enterprise environmental factors"],
+answer: "b",
+explanation: "Activity list is not an input to the Define Activities process. The inputs to the process are project scope statement, work breakdown structure, enterprise environmental factors, organizational process assets, and the project management plan."
+},
+{
+question: "Which of the following is not a tool or technique used in the Sequence Activities process?",
+choices: ["Precedence diagramming method", "Dependency determination", "Expert judgment", "Activity list"],
+answer: "d",
+explanation: "Activity list is not a tool or technique used in the Sequence Activities process. The tools and techniques for the process are precedence diagramming method, dependency determination, leads and lags, schedule network templates, and expert judgment."
+},
+{
+question: "Which of the following is not an output of the Sequence Activities process?",
+choices: ["Schedule network diagram", "Activity list", "Project schedule", "Schedule baseline"],
+answer: "b",
+explanation: "Activity list is not an output of the Sequence Activities process. The outputs of the process are the schedule network diagram, project schedule, and schedule baseline."
+},
+{
+question: "Which of the following is not a tool or technique used in the Develop Schedule process?",
+choices: ["Schedule network analysis", "Resource leveling", "Critical path method", "Requirements traceability matrix"],
+answer: "d",
+explanation: "Requirements traceability matrix is not a tool or technique used in the Develop Schedule process. The tools and techniques for the process are schedule network analysis, critical path method, resource leveling, what-if scenario analysis, and project management software."
+},
+{
+question: "Which of the following is not an input to the Control Schedule process?",
+choices: ["Project management plan", "Work performance data", "Project schedule", "Risk register"],
+answer: "d",
+explanation: "Risk register is not an input to the Control Schedule process. The inputs to the process are project management plan, project schedule, work performance data, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Control Schedule process?",
+choices: ["Schedule baseline updates", "Cost performance baseline updates", "Project management plan updates", "Change requests"],
+answer: "b",
+explanation: "Cost performance baseline updates are not an output of the Control Schedule process. The outputs of the process are schedule baseline updates, project management plan updates, and change requests."
+},
+{
+question: "Which of the following is not a technique used in the Estimate Costs process?",
+choices: ["Bottom-up estimating", "Three-point estimating", "Reserve analysis", "Requirements traceability"],
+answer: "d",
+explanation: "Requirements traceability is not a technique used in the Estimate Costs process. The techniques for the process are analogous estimating, parametric estimating, bottom-up estimating, Three-point estimating, reserve analysis, and cost of quality analysis."
+},
+{
+question: "Which of the following is not an input to the Determine Budget process?",
+choices: ["Cost management plan", "Project schedule", "Resource calendars", "Risk register"],
+answer: "d",
+explanation: "Risk register is not an input to the Determine Budget process. The inputs to the process are cost management plan, project schedule, resource calendars, and activity cost estimates."
+},
+{
+question: "Which of the following is not an output of the Determine Budget process?",
+choices: ["Cost baseline", "Project funding requirements", "Risk register updates", "Cost management plan updates"],
+answer: "c",
+explanation: "Risk register updates are not an output of the Determine Budget process. The outputs of the process are cost baseline, project funding requirements, project document updates, and cost management plan updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Control Costs process?",
+choices: ["Variance analysis", "Performance reviews", "Resource optimization techniques", "Cost management plan"],
+answer: "d",
+explanation: "Cost management plan is not a tool or technique used in the Control Costs process. The tools and techniques for the process are earned value management, forecasting, to-complete performance index, performance reviews, variance analysis, and resource optimization techniques."
+},
+{
+question: "Which of the following is not an input to the Plan Quality process?",
+choices: ["Project management plan", "Cost performance baseline", "Enterprise environmental factors", "Organizational process assets"],
+answer: "b",
+explanation: "Cost performance baseline is not an input to the Plan Quality process. The inputs to the process are project management plan, project charter, stakeholder register, enterprise environmental factors, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Plan Quality process?",
+choices: ["Quality metrics", "Quality checklists", "Quality control measurements", "Quality management plan updates"],
+answer: "c",
+explanation: "Quality control measurements are not an output of the Plan Quality process. The outputs of the process are quality management plan, quality metrics, quality checklists, and process improvement plan."
+},
+{
+question: "Which of the following is not a tool or technique used in the Perform Quality Assurance process?",
+choices: ["Inspection", "Statistical sampling", "Benchmarking", "Assumption analysis"],
+answer: "d",
+explanation: "Assumption analysis is not a tool or technique used in the Perform Quality Assurance process. The tools and techniques for the process are quality planning tools and techniques, quality audits, process analysis, inspection, and statistical sampling. Benchmarking may also be used."
+},
+{
+question: "Which of the following is not an input to the Control Quality process?",
+choices: ["Quality management plan", "Quality metrics", "Quality checklists", "Quality control measurements"],
+answer: "d",
+explanation: "Quality control measurements are not an input to the Control Quality process. The inputs to the process are quality management plan, quality metrics, quality checklists, work performance data, and approved change requests."
+},
+{
+question: "Which of the following is not an output of the Control Quality process?",
+choices: ["Quality reports", "Test and evaluation documents", "Revised test and evaluation documents", "Lessons learned"],
+answer: "d",
+explanation: "Lessons learned is not an output of the Control Quality process. The outputs of the process are quality control measurements, validated changes, validated deliverables, and work performance information."
+},
+{
+question: "Which of the following is not a tool or technique used in the Plan Resource Management process?",
+choices: ["Expert judgment", "Resource breakdown structure", "Organizational theory", "Bottom-up estimating"],
+answer: "d",
+explanation: "Bottom-up estimating is not a tool or technique used in the Plan Resource Management process. The tools and techniques for the process are expert judgment, organizational theory, meetings, and analytical techniques such as roles and responsibility matrix and resource breakdown structure."
+},
+{
+question: "Which of the following is not an input to the Estimate Activity Resources process?",
+choices: ["Project management plan", "Resource calendars", "Cost management plan", "Organizational process assets"],
+answer: "c",
+explanation: "Cost management plan is not an input to the Estimate Activity Resources process. The inputs to the process are project management plan, activity list, activity attributes, resource calendars, risk register, and organizational process assets."
+},
+{
+question: "Which of the following is not a tool or technique used in the Acquire Resources process?",
+choices: ["Negotiation", "Virtual teams", "Multi-criteria decision analysis", "Cost aggregation"],
+answer: "d",
+explanation: "Cost aggregation is not a tool or technique used in the Acquire Resources process. The tools and techniques for the process are organizational charts and position descriptions, pre-assignment, negotiation, acquisition, and virtual teams. Multi-criteria decision analysis may also be used."
+},
+{
+question: "Which of the following is not an output of the Develop Team process?",
+choices: ["Team performance assessments", "Change requests", "Enterprise environmental factors updates", "Organizational process assets updates"],
+answer: "d",
+explanation: "Organizational process assets updates are not an output of the Develop Team process. The outputs of the process are team performance assessments, enterprise environmental factors updates, and change requests."
+},
+{
+question: "Which of the following is not a tool or technique used in the Manage Team process?",
+choices: ["Conflict management", "Interpersonal skills", "Project management software", "Resource leveling"],
+answer: "d",
+explanation: "Resource leveling is not a tool or technique used in the Manage Team process. The tools and techniques for the process are observation and conversation, project performance appraisals, conflict management, interpersonal skills, and project management software."
+},
+{
+question: "Which of the following is not an input to the Manage Stakeholder Engagement process?",
+choices: ["Stakeholder management plan", "Change log", "Issue log", "Risk register"],
+answer: "d",
+explanation: "Risk register is not an input to the Manage Stakeholder Engagement process. The inputs to the process are stakeholder management plan, change log, issue log, work performance reports, and organizational process assets."
+},
+{
+question: "Which of the following is not a tool or technique used in the Monitor Stakeholder Engagement process?",
+choices: ["Expert judgment", "Information management systems", "Communication methods", "Earned value analysis"],
+answer: "d",
+explanation: "Earned value analysis is not a tool or technique used in the Monitor Stakeholder Engagement process. The tools and techniques for the process are expert judgment, communication methods, information management systems, and meetings. "
+},
+{
+question: "Which of the following is not an input to the Monitor Communications process?",
+choices: ["Communication management plan", "Issue log", "Work performance data", "Risk register"],
+answer: "d",
+explanation: "Risk register is not an input to the Monitor Communications process. The inputs to the process are communication management plan, work performance data, issue log, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Monitor Communications process?",
+choices: ["Change requests", "Project management plan updates", "Project document updates", "Performance reports"],
+answer: "a",
+explanation: "Change requests are not an output of the Monitor Communications process. The outputs of the process are project management plan updates, project document updates, organizational process assets updates, and performance reports."
+},
+{
+question: "Which of the following is not a tool or technique used in the Manage Project Knowledge process?",
+choices: ["Expert judgment", "Interpersonal skills", "Project management information system", "Requirements management"],
+answer: "d",
+explanation: "Requirements management is not a tool or technique used in the Manage Project Knowledge process. The tools and techniques for the process are expert judgment, knowledge management, knowledge capture, knowledge sharing and reuse, and project management information system. Interpersonal skills may also be used."
+},
+{
+question: "Which of the following is not an input to the Control Stakeholder Engagement process?",
+choices: ["Stakeholder management plan", "Project charter", "Organizational process assets", "Work performance data"],
+answer: "b",
+explanation: "Project charter is not an input to the Control Stakeholder Engagement process. The inputs to the process are stakeholder management plan, change log, work performance data, and organizational process assets."
+},
+{
+question: "Which of the following is not an output of the Control Stakeholder Engagement process?",
+choices: ["Change requests", "Work performance information", "Organizational process assets updates", "Lessons learned"],
+answer: "d",
+explanation: "Lessons learned is not an output of the Control Stakeholder Engagement process. The outputs of the process are change requests, work performance information, project document updates, and organizational process assets updates."
+},
+{
+question: "Which of the following is not a tool or technique used in the Close Project or Phase process?",
+choices: ["Expert judgment", "Project management software", "Product analysis", "Regression analysis"],
+answer: "d",
+explanation: "Regression analysis is not a tool or technique used in the Close Project or Phase process. The tools and techniques for the process are expert judgment, product analysis, and project management software."
+}
+
+		];
+
+		// Shuffle the questions and answers for multiple choice
+		function shuffleArray(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			return array;
+		}
+
+		shuffleArray(questions);
+	</script>
+
+	<!-- Display the questions and answer choices -->
+	<script>
+		for (var i = 0; i < questions.length; i++) {
+			document.write("<h2>Question " + (i+1) + "</h2>");
+			document.write("<p>" + questions[i].question + "</p>");
+
+			for (var j = 0; j < questions[i].choices.length; j++) {
+				var choice = questions[i].choices[j];
+				var id = "q" + (i+1) + "choice" + (j+1);
+				document.write('<input type="radio" id="' + id + '" name="q' + (i+1) + '" value="' + String.fromCharCode(97 + j) + '">');
+				document.write('<label for="' + id + '">' + choice + '</label><br>');
+			}
+
+			document.write('<button onclick="submitAnswer(' + i + ')">Submit</button>');
+			document.write('<div id="q' + (i+1) + 'feedback"></div>');
+		}
+	</script>
+
+	<!-- Display the correct answer and explanation when the user submits an answer -->
+	<script>
+		function submitAnswer(questionIndex) {
+			// Get the user's answer
+			var radios = document.getElementsByName("q" + (questionIndex+1));
+			var userAnswer = null;
+			for (var i = 0; i < radios.length; i++) {
+				if (radios[i].checked) {
+					userAnswer = radios[i].value;
+					break;
+				}
+			}
+		// Display the correct answer and explanation
+		var correctAnswer = questions[questionIndex].answer;
+		var explanation = questions[questionIndex].explanation;
+
+		var feedbackDiv = document.getElementById("q" + (questionIndex+1) + "feedback");
+
+		if (userAnswer == null) {
+			feedbackDiv.innerHTML = "Please select an answer.";
+		} else if (userAnswer === correctAnswer) {
+			feedbackDiv.innerHTML = "Correct!";
+		} else {
+			feedbackDiv.innerHTML = "Incorrect. The correct answer is " + correctAnswer.toUpperCase() + ": " + explanation;
+		}
+	}
+
+// Check if the answer is correct FILL IN THE BLANKS
+		function checkAnswer(questionIndex) {
+			var input = document.getElementById("q" + questionIndex);
+			var feedback = document.getElementById("feedback" + questionIndex);
+
+			if (input.value.trim().toLowerCase() === questions[questionIndex - 1].answer.toLowerCase()) {
+				feedback.innerHTML = "Correct! " + questions[questionIndex - 1].explanation;
+} else {
+feedback.innerHTML = "Incorrect. " + questions[questionIndex - 1].explanation;
+}
+}
+	// Display the questions on the page
+	function displayQuestions() {
+		var randomizedQuestions = shuffleQuestions(questions);
+		var questionsContainer = document.getElementById("questions-container");
+
+		for (var i = 0; i < randomizedQuestions.length; i++) {
+			var question = randomizedQuestions[i];
+			var questionIndex = i + 1;
+
+			// Create the question element
+			var questionElement = document.createElement("div");
+			questionElement.className = "question";
+
+			// Add the question text
+			var questionText = document.createElement("p");
+			questionText.innerHTML = question.question.replace("_______________", "<input type='text' id='q" + questionIndex + "'>");
+			questionElement.appendChild(questionText);
+
+			// Add the submit button
+			var submitButton = document.createElement("button");
+			submitButton.innerHTML = "Submit";
+			submitButton.onclick = (function(questionIndex) {
+				return function() {
+					checkAnswer(questionIndex);
+				}
+			})(questionIndex);
+			questionElement.appendChild(submitButton);
+
+			// Add the feedback element
+			var feedbackElement = document.createElement("p");
+			feedbackElement.id = "feedback" + questionIndex;
+			questionElement.appendChild(feedbackElement);
+
+			// Add the question element to the container
+			questionsContainer.appendChild(questionElement);
+		}
+	}
+</script>
+
+
+			

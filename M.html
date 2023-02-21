@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PMP Practice Questions</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #0072C6;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		
+		h1 {
+			margin-top: 0;
+			font-size: 2em;
+		}
+		
+		p {
+			margin-top: 0;
+			font-size: 1.2em;
+		}
+		
+		.container {
+			margin: auto;
+			max-width: 800px;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.item {
+			width: 200px;
+			height: 80px;
+			background-color: lightgray;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 1.2em;
+			cursor: pointer;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 0;
+		}
+		
+		.dropzone {
+			width: 200px;
+			height: 200px;
+			background-color: gray;
+			margin: 10px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 1.2em;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 0;
+		}
+		
+		.correct {
+			background-color: green;
+		}
+		
+		.incorrect {
+			background-color: red;
+		}
+.center {
+  text-align: center;
+}
+	
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>Click and Match Practice Questions</h1>
+		<p>**QUESTIONS ARE RANDOMIZED UPON EACH PAGE REFRESH**</p>
+		<p>Please do not click on the text or matching will not work, click within the box area only</p>	
+	</header>
+	<h2 class="center">Inputs</h2>
+	<div class="container" id="players-container"></div>
+	<h2 class="center">Outputs</h2>
+	<div class="container" id="dropzones-container"></div>
+
+<div id="footer">
+  <p><strong>What are inputs and outputs and how do they relate to process groups in the PMBOK?</strong></p>
+  <p>The Project Management Body of Knowledge (PMBOK) defines five process groups, each consisting of a set of related processes that are necessary to complete a project. Inputs are the information and materials that are required to start a process, while outputs are the results of a process. In many cases, the outputs of one process become the inputs of another process. This allows for a seamless transition between process groups and ensures that the project is completed successfully.</p>
+  <p>For example, the inputs to the planning process group might include the project charter, stakeholder requirements, and historical project data. The outputs of the planning process group might include the project management plan, project documents, and the project schedule. These outputs are the result of planning the project and are used as inputs to the execution process group.</p>
+  <p>Understanding the inputs and outputs of each process group is essential to successfully managing a project according to the PMBOK. By ensuring that the necessary inputs are provided and that the outputs are produced as expected, a project manager can ensure that the project is completed on time, on budget, and to the required level of quality.</p>
+</div>
+
+
+<script>
+		let correctMatches = 0;
+		let totalMatches = 5;
+		let currentSelection = null;
+		let isMatching = false;
+		
+		let players = [
+     { name: "Scope Statement", number: "Scope Verification" },
+    { name: "WBS", number: "Scope Definition" },
+    { name: "Scope Baseline", number: "Scope Control" },
+    { name: "Stakeholder Register", number: "Stakeholder Management" },
+    { name: "Project Schedule", number: "Schedule Control" },
+    { name: "Activity Resource Requirements", number: "Resource Planning" },
+    { name: "Human Resource Management Plan", number: "Team Management" },
+    { name: "Risk Register", number: "Risk Identification" },
+    { name: "Risk Management Plan", number: "Risk Management" },
+    { name: "Project Budget", number: "Cost Control" },
+ { name: "Quality Metrics", number: "Quality Assurance" },
+    { name: "Control Charts", number: "Control Quality" },
+    { name: "Performance Reports", number: "Monitor and Control Project Work" },
+    { name: "Project Management Software", number: "Project Integration Management" },
+    { name: "Resource Calendars", number: "Resource Optimization" },
+    { name: "Work Breakdown Structure Dictionary", number: "Scope Definition" },
+    { name: "Activity List", number: "Activity Sequencing" },
+    { name: "Resource Breakdown Structure", number: "Resource Planning" },
+    { name: "Project Organizational Chart", number: "Human Resource Management" },
+    { name: "Risk Data Quality Assessment", number: "Risk Identification" },
+ { name: "Activity Resource Requirements", number: "Resource Planning" },
+    { name: "Communication Requirements", number: "Communications Planning" },
+    { name: "Lessons Learned Register", number: "Monitor and Control Project Work" },
+    { name: "Project Schedule Network Diagrams", number: "Schedule Development" },
+    { name: "Risk Urgency Assessment", number: "Risk Management" },
+    { name: "Quality Control Measurements", number: "Control Quality" },
+    { name: "Team Performance Assessments", number: "Team Development" },
+    { name: "Work Performance Reports", number: "Monitor and Control Project Work" },
+    { name: "Approved Change Requests", number: "Perform Integrated Change Control" },
+    { name: "Project Documents Updates", number: "Perform Integrated Change Control" },
+    { name: "Procurement Documents", number: "Plan Procurement Management" },
+    { name: "Requirements Documentation", number: "Collect Requirements" },
+    { name: "Risk Categorization", number: "Risk Management" },
+    { name: "Activity Resource Availability", number: "Resource Planning" },
+    { name: "Enterprise Environmental Factors Updates", number: "Plan Stakeholder Engagement" },
+    { name: "Change Log", number: "Perform Integrated Change Control" },
+    { name: "Expert Judgment", number: "Scope Definition" },
+    { name: "Project Funding Requirements", number: "Plan Resource Management" },
+    { name: "Project Staff Assignments", number: "Develop Project Team" },
+    { name: "Risk Triggers", number: "Risk Management" },
+    { name: "Work Performance Data", number: "Monitor and Control Project Work" },
+    { name: "Agreements", number: "Plan Procurement Management" },
+    { name: "Assumption Log", number: "Collect Requirements" },
+    { name: "Configuration Management Plan", number: "Configuration Management" },
+    { name: "Issue Log", number: "Monitor and Control Project Work" },
+    { name: "Project Management Information System", number: "Project Integration Management" },
+    { name: "Project Schedule Model", number: "Schedule Development" },
+    { name: "Requirements Traceability Matrix", number: "Collect Requirements" },
+    { name: "Stakeholder Engagement Plan", number: "Plan Stakeholder Engagement" },
+    { name: "Variance Analysis", number: "Monitor and Control Project Work" },
+];
+
+		
+// Shuffle the players array and select the first three players and numbers
+players = shuffle(players).slice(0, 5);
+let shuffledNames = shuffle(players.map(p => p.name));
+let shuffledNumbers = shuffle(players.map(p => p.number));
+
+		
+		// Create the player name elements
+		let playersContainer = document.getElementById("players-container");
+		for (let i = 0; i < shuffledNames.length; i++) {
+			let item = document.createElement("button");
+			item.classList.add("item");
+			item.id = "player" + (i + 1);
+			item.innerHTML = shuffledNames[i];
+			playersContainer.appendChild(item);
+		}
+		
+		// Create the drop zone elements
+		let dropzonesContainer = document.getElementById("dropzones-container");
+		for (let i = 0; i < shuffledNumbers.length; i++) {
+			let dropzone = document.createElement("div");
+			dropzone.classList.add("dropzone");
+			dropzone.id = "dropzone" + shuffledNumbers[i];
+			dropzone.innerHTML = "<span>" + shuffledNumbers[i] + "</span>";
+dropzonesContainer.appendChild(dropzone);
+}
+	function handleClick(event) {
+    let button = event.target;
+    if (button.classList.contains("item")) {
+        if (button === currentSelection) {
+            // Deselect the current selection
+            button.classList.remove("selected");
+            currentSelection = null;
+        } else if (currentSelection === null) {
+            // Select the first button
+            button.classList.add("selected");
+            currentSelection = button;
+        } else {
+            // Match the two buttons
+            let player1 = players.find(p => p.name.toLowerCase() === currentSelection.textContent.toLowerCase());
+            let player2 = players.find(p => p.number === button.textContent);
+            let dropzone1 = document.getElementById("dropzone" + player1.number);
+            let dropzone2 = document.getElementById("dropzone" + player2.number);
+            if (player1 && player2 && player1.number === player2.number) {
+                currentSelection.classList.add("correct");
+                button.classList.add("correct");
+                currentSelection.disabled = true;
+                button.disabled = true;
+                currentSelection.classList.remove("selected");
+                button.classList.remove("selected");
+                currentSelection = null;
+                correctMatches++;
+                if (correctMatches === totalMatches) {
+                    alert("Congratulations! You have matched all the players!");
+                }
+            } else {
+                currentSelection.classList.add("incorrect");
+                button.classList.add("incorrect");
+                setTimeout(() => {
+                    currentSelection.classList.remove("selected", "incorrect");
+                    button.classList.remove("incorrect");
+                    currentSelection = null;
+                }, 1000);
+            }
+        }
+    } else if (button.classList.contains("dropzone")) {
+        let dropzone = button;
+        let player = players.find(p => p.number === dropzone.id.slice(8));
+        if (!isMatching && currentSelection && player && player.name.toLowerCase() === currentSelection.textContent.toLowerCase()) {
+            isMatching = true;
+            // Match the two buttons
+            let dropzone1 = document.getElementById("dropzone" + player.number);
+            let dropzone2 = currentSelection.parentElement;
+            currentSelection.classList.add("correct");
+            button.classList.add("correct");
+            currentSelection.disabled = false;
+            dropzone.removeEventListener("click", handleClick);
+            currentSelection.classList.remove("selected");
+            currentSelection = null;
+            correctMatches++;
+            if (correctMatches === totalMatches) {
+                alert("Congratulations! You have matched all the inputs with outputs!  Refresh the page for more questions.");
+            }
+            isMatching = false;
+        } else if (currentSelection && !isMatching) {
+            isMatching = true;
+            // Incorrect match
+            currentSelection.classList.add("incorrect");
+            dropzone.classList.add("incorrect");
+            setTimeout(() => {
+                currentSelection.classList.remove("selected", "incorrect");
+                dropzone.classList.remove("incorrect");
+                currentSelection = null;
+                isMatching = false;
+            }, 1000);
+        }
+    }
+}
+
+	
+	function shuffle(array) {
+		for (let i = array.length - 1; i > 0; i--) {
+			let j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+		return array;
+	}
+	
+	let items = document.querySelectorAll(".item, .dropzone");
+	items.forEach(item => {
+		item.addEventListener("click", handleClick);
+	});
+
+
+</script>
+</body>
+</html>
